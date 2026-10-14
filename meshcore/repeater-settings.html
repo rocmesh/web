@@ -1,0 +1,254 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Regional repeater setting information for ROCMesh.">
+  <title>ROCMesh - Repeater Settings</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main>
+    <div class="container py-vh-4">
+      <h1 class="display-4 fw-bold mt-5">Recommended Repeater Settings</h1>
+
+      <p class="lead">
+        These settings represent the current ROCMesh standards.
+        Please ensure any repeater you manage is updated to match the settings on this page.
+      </p>
+
+      <h2>Radio/Network Settings</h2>
+
+      <p>
+        Repeater settings are more important than companion settings because your repeater is <i>infrastructure</i> and will be used by other members of the mesh.
+        These tables summarize recommended settings, with easy copy-pastable commands to configure your companion at the bottom of the page.
+      </p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Preset</td>
+            <td>USA/Canada OR Custom</td>
+          </tr>
+          <tr>
+            <td>Frequency (MHz)</td>
+            <td>910.525</td>
+          </tr>
+          <tr>
+            <td>Bandwidth</td>
+            <td>62.5 kHz</td>
+          </tr>
+          <tr>
+            <td>Spreading Factor</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Coding Rate</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>Enable Repeat Mode</td>
+            <td>Unchecked</td>
+          </tr>
+          <tr>
+            <td>Default Path Hash Size</td>
+            <td>2-byte</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Regions</h2>
+      
+      <p>
+        Region-scoped packets will not get repeated by your repeater unless the repeater is configured to do so.
+        Regions are starting to get more use in our area, so it's important to make sure our repeaters can properly support them.
+      </p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>na</td>
+            <td>North America</td>
+          </tr>
+          <tr>
+            <td>us</td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td>east</td>
+            <td>Eastern United States</td>
+          </tr>
+          <tr>
+            <td>northeast</td>
+            <td>Northeastern United States</td>
+          </tr>
+          <tr>
+            <td>us-ny</td>
+            <td>New York State</td>
+          </tr>
+          <tr>
+            <td>roc</td>
+            <td>Rochester area (not just the City)</td>
+          </tr>
+          <tr>
+            <td>onny</td>
+            <td>Ontario, Canada and New York State</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Advert Intervals</h2>
+      
+      <p>
+        Repeater adverts help companions and other repeaters discover your repeater.
+        The default settings are okay, but these will help more users discover the mesh without creating too much unnecessary traffic.
+      </p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Advert Type</th>
+            <th>Interval</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Flood</td>
+            <td>3 hours</td>
+          </tr>
+          <tr>
+            <td>Zero-hop</td>
+            <td>60 minutes (or 0 minutes if you have lots of repeaters nearby, which will disable direct adverts)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Location</h2>
+      
+      <p>
+        It is recommended to set your repeater's location so that others can discover it on the map!
+        You don't have to use your exact location (but you can, and many people do); neighborhood-level accuracy is usually fine.
+        If you do choose to set your repeater's location, <b>do so using the map, not with GPS</b>.
+        GPS is unnecessary on a repeater since it doesn't move, and will only drain the battery faster.
+      </p>
+
+      <h2>Additional Tweaks</h2>
+      
+      <p>
+        Additional tweaks are possible, but must be done with care.
+        Some recommended tweaks which increase mesh stability at the cost of slightly increased latency are included in the CLI section below.
+      </p>
+
+      <h2>CLI Configuration</h2>
+      
+      <p>
+        The easiest way to configure your repeater is to use its command line.
+        Log into the repeater's CLI (Command Line Interface) and run each of these commands in order.
+        Each line is a separate command.
+        <b>Do not paste the lines starting with "#".
+        These are comments to help you understand what you are doing.</b>
+        
+        <pre><code>
+        # Configure radio settings (frequency, bandwidth, spreading factor, coding rate)
+        set radio 910.525,62.5,7,8
+        # Set 2-byte path hash
+        set path.hash.mode 1
+        # Configure advert intervals
+        set flood.advert.interval 3
+        set advert.interval 60
+        # Configure additional settings for improved reliability
+        set agc.reset.interval 4
+        set multi.acks 1
+        set rxdelay 3
+        # Reboot to save settings (you will likely have to reconnect to the repeater after this)
+        reboot
+        # Update the repeater's internal clock
+        clock sync
+        # Verify all of our settings saved
+        get radio
+        get path.hash.mode
+        get agc.reset.interval
+        get multi.acks
+        get rxdelay
+        get flood.advert.interval
+        get advert.interval
+        # Set regions
+        region def na|* us|* east|* northeast|* us-ny|* roc|* onny
+        region save
+        # Reboot one more time
+        reboot
+        # Verify regions saved
+        region
+        # Finally, send an advert to introduce your repeater to the mesh!
+        # Do this once you have installed the repeater in its permanent home (and set its location).
+        advert
+        </code></pre>
+      </p>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
