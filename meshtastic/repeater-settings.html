@@ -1,0 +1,259 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Regional repeater setting information for ROCMesh.">
+  <title>ROCMesh - Repeater Settings</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main>
+    <div class="container py-vh-4">
+      <h1 class="display-4 fw-bold mt-5">Recommended Infrastructure Settings</h1>
+
+      <p class="lead">
+        These settings represent the current ROCMesh standards for local Meshtastic infrastructure nodes.
+        Please ensure any home base station or repeater node you manage is configured to match the recommendations on
+        this page.
+      </p>
+
+      <h2>Radio & Network Settings</h2>
+
+      <p>
+        Infrastructure node settings are critical because fixed relays support the broader local mesh.
+        Unlike standard handheld client nodes, infrastructure devices require carefully selected roles, power
+        management, and broadcast rates to avoid saturating local RF airtime.
+      </p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Value</th>
+            <th>Location in App / CLI</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Region</td>
+            <td>US</td>
+            <td>LoRa Config &gt; Region</td>
+            <td>Sets the 915 MHz ISM frequency band.</td>
+          </tr>
+          <tr>
+            <td>Modem Preset</td>
+            <td>LongFast</td>
+            <td>LoRa Config &gt; Modem Preset</td>
+            <td>Standard public preset (SF11, BW 250 kHz, CR 4/5).</td>
+          </tr>
+          <tr>
+            <td>Frequency Slot</td>
+            <td>20 (906.875 MHz)</td>
+            <td>LoRa Config &gt; Frequency Slot</td>
+            <td>Standard US public channel index.</td>
+          </tr>
+          <tr>
+            <td>Hop Limit</td>
+            <td>3</td>
+            <td>LoRa Config &gt; Hop Limit</td>
+            <td>Prevents packet loops while supporting multi-hop links across the region.</td>
+          </tr>
+          <tr>
+            <td>Device Role</td>
+            <td>CLIENT_BASE</td>
+            <td>Device Config &gt; Role</td>
+            <td>Recommended standard for home base stations, attic nodes, and local repeaters.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Infrastructure Roles Explained</h2>
+
+      <p>
+        Meshtastic uses specific roles to dictate how aggressively a device forwards traffic and whether it appears on
+        public node lists.
+        Selecting the correct role for your installation prevents channel congestion and optimizes local performance.
+      </p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Visible on Mesh Map?</th>
+            <th>Best Use Case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>CLIENT_BASE</b></td>
+            <td>Yes</td>
+            <td><b>Recommended Standard:</b> Acts as a standard client relay for the general public mesh, but uses
+              priority rebroadcast timing for any <i>favorited</i> nodes (such as your handhelds or indoor devices).
+              Perfect for home base stations, attic mounts, and rooftop relays.</td>
+          </tr>
+          <tr>
+            <td><b>CLIENT</b></td>
+            <td>Yes</td>
+            <td><b>Standard Relay:</b> Ideal for mobile setups or general node installations. Intelligently rebroadcasts
+              packets across the mesh using standard contention timing.</td>
+          </tr>
+          <tr>
+            <td><b>ROUTER_LATE</b></td>
+            <td>Yes</td>
+            <td><b>Fill-in / Dead-spot Relays:</b> Waits until standard clients finish rebroadcasting before
+              transmitting. Useful for valley locations or shadowed urban clusters.</td>
+          </tr>
+          <tr>
+            <td><b>REPEATER</b></td>
+            <td>No</td>
+            <td><b>Silent Infrastructure:</b> Relays packets with minimal overhead and zero telemetry broadcasts. Does
+              not appear on local node lists or client maps. <i>Avoid unless operating dedicated solar infrastructure
+                with no local user nodes.</i></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="alert alert-info">
+        <strong>How to take advantage of CLIENT_BASE:</strong>
+        <p class="mb-0">
+          Once your repeater is set to <code>CLIENT_BASE</code>, open the Meshtastic app on your handheld or indoor
+          node, locate your repeater in the <b>Nodes</b> list, and tap the <b>Favorite (Star)</b> icon. Do the same on
+          your repeater node to favorite your handheld. This tells the repeater to fast-track messages sent to and from
+          your personal devices through its well-positioned antenna!
+        </p>
+      </div>
+
+      <h2>Broadcast & NodeInfo Intervals</h2>
+
+      <p>
+        Infrastructure nodes send periodic status packets to help local client nodes map out topology.
+        Increasing these intervals reduces airtime usage on high-traffic channels.
+      </p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Broadcast Type</th>
+            <th>Recommended Interval</th>
+            <th>CLI Parameter</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NodeInfo Broadcast</td>
+            <td>10,800 sec (3 hours)</td>
+            <td><code>device.node_info_broadcast_secs = 10800</code></td>
+          </tr>
+          <tr>
+            <td>Telemetry Broadcast</td>
+            <td>7,200 sec (2 hours) or Disabled</td>
+            <td><code>telemetry.environment_update_interval = 7200</code></td>
+          </tr>
+          <tr>
+            <td>Position Broadcast</td>
+            <td>10,800 sec (3 hours) or Fixed</td>
+            <td><code>position.position_broadcast_secs = 10800</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Location & GPS Guidance</h2>
+
+      <p>
+        It is strongly recommended to set a <b>Fixed Position</b> on permanent infrastructure nodes so local users can
+        discover nodes on regional mesh maps.
+        Because infrastructure nodes are stationary, <b>always disable hardware GPS</b> and manually enter your
+        coordinates via the app or CLI.
+        Disabling onboard GPS hardware saves significant battery/solar power and prevents unnecessary position drift
+        packets over the air.
+      </p>
+
+      <h2>CLI Configuration (Meshtastic Python CLI / Serial)</h2>
+
+      <p>
+        You can configure your repeater node via serial using the standard <code>meshtastic</code> Python CLI tool or
+        the built-in Web Serial Console.
+        Run the following commands in sequence:
+      </p>
+
+      <pre><code># Set basic region and modem defaults
+      meshtastic --set lora.region US
+      meshtastic --set lora.modem_preset LONG_FAST
+      meshtastic --set lora.hop_limit 3
+
+      # Set infrastructure role to CLIENT_BASE
+      meshtastic --set device.role CLIENT_BASE
+
+      # Throttle routine presence broadcasts to preserve channel airtime
+      meshtastic --set device.node_info_broadcast_secs 10800
+      meshtastic --set position.position_broadcast_secs 10800
+
+      # Set a fixed location (replace with your lat, lon, and altitude in meters)
+      meshtastic --set-owner "ROC-Rpt-North"
+      meshtastic --set-lat 43.1566 --set-lon -77.6088 --set-alt 150
+      meshtastic --set position.fixed_position true
+
+      # Disable onboard GPS hardware to save power
+      meshtastic --set position.gps_mode DISABLED
+
+      # Reboot the node to apply all configuration changes
+      meshtastic --reboot
+      </code></pre>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

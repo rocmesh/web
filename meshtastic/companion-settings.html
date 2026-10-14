@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Regional companion setting information for ROCMesh.">
+  <title>ROCMesh - Companion Settings</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main>
+    <div class="container py-vh-4">
+      <h1 class="display-4 fw-bold mt-5">Recommended Companion Settings</h1>
+
+      <p class="lead">
+        Make sure to match these settings in your Meshtastic client app to ensure you can talk to the local mesh!
+      </p>
+
+      <p>
+        When setting up your node, select the US region. The crucial requirement is that your Region, Frequency Slot,
+        and Modem Preset match the parameters listed below.
+      </p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Value</th>
+            <th>Location in App</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Region</td>
+            <td>US</td>
+            <td>LoRa Config &gt; Region</td>
+            <td>Sets the 915 MHz band for North America.</td>
+          </tr>
+          <tr>
+            <td>Modem Preset</td>
+            <td>LongFast</td>
+            <td>LoRa Config &gt; Modem Preset</td>
+            <td>Default preset (SF11, BW 250 kHz, CR 4/5). Do not change to custom unless requested.</td>
+          </tr>
+          <tr>
+            <td>Frequency Slot</td>
+            <td>20 (906.875 MHz)</td>
+            <td>LoRa Config &gt; Frequency Slot</td>
+            <td>Standard public channel slot index for US operations.</td>
+          </tr>
+          <tr>
+            <td>Device Role</td>
+            <td>CLIENT</td>
+            <td>Device Config &gt; Role</td>
+            <td>Standard mobile/portable companion setup. Do NOT select ROUTER or REPEATER.</td>
+          </tr>
+          <tr>
+            <td>Hop Limit</td>
+            <td>3</td>
+            <td>LoRa Config &gt; Hop Limit</td>
+            <td>Default max hops. Prevents mesh airtime congestion while maintaining coverage.</td>
+          </tr>
+          <tr>
+            <td>Position Precision</td>
+            <td>Approximate / 100m</td>
+            <td>Position Config &gt; Location Precision</td>
+            <td>Preserves battery, saves airtime, and protects privacy on public channels.</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
