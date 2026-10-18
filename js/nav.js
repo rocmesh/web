@@ -38,7 +38,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="${root}meshtastic/channels.html">Channels</a></li>
               <li><a class="dropdown-item" href="${root}meshtastic/companion-settings.html">Companion Settings</a></li>
-              <li><a class="dropdown-item" href="${root}meshtastic/repeater-settings.html">Repeater Settings</a></li>
+              <li><a class="dropdown-item" href="${root}meshtastic/infrastructure-settings.html">Infrastructure Settings</a></li>
             </ul>
           </li>
         </ul>
