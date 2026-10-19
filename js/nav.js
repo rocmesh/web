@@ -41,6 +41,12 @@
               <li><a class="dropdown-item" href="${root}meshtastic/infrastructure-settings.html">Infrastructure Settings</a></li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="${root}infrastructure.html">Host a Node!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="${root}contact.html">Contact Us!</a>
+          </li>
         </ul>
         <a href="https://discord.gg/aBsNaKy2u5" data-splitbee-event="Join Discord" aria-label="Join our discord"
           class="link-dark pb-1 link-fancy me-2">
