@@ -1,0 +1,125 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Regional hashtag channel information for ROCMesh.">
+  <title>ROCMesh - Channels</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main>
+    <div class="container py-vh-4">
+      <h1 class="display-4 fw-bold mt-5">Recommended Channels</h1>
+      <p class="lead">
+        Channels allow anyone to join and talk, making them great for conversations on specific topics.
+        In order to see messages in a channel, you need to join it first.
+        Your companion will ignore any message sent in any channel you haven't joined.
+        The channels below represent a good place to start, but the channels you join are 100% up to you.
+      </p>
+      <p>
+        To join a channel below, click "Settings" in your Meshtastic app, then click "Channels", then click the "Plus" (Add) button on the bottom right.
+        Type the channel name in the "Channel Name" field, and the PSK in the "PSK" field.
+        Leave the two MQTT and the Position toggles disabled unless you know what you're doing, then click "Save".
+      </p>
+      <p>
+        <b>Please respect airtime limits, MQTT bridge settings, and bot guidelines.</b>
+        A big part of keeping our local mesh reliable comes from minimizing unnecessary channel congestion, and keeping MQTT uplinks restricted on secondary channels is one of our best ways of achieving this.
+      </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Channel Name</th>
+            <th>Description</th>
+            <th>Encryption / PSK</th>
+            <th>Slot Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LongFast</td>
+            <td>The channel that everyone lands in when they first set up Meshtastic.</td>
+            <td>AQ==</td>
+            <td>Primary (Slot 0)</td>
+          </tr>
+          <tr>
+            <td>roc</td>
+            <td>Rochester-area chat. This is basically our local version of LongFast.</td>
+            <td>AQ==</td>
+            <td>Secondary</td>
+          </tr>
+          <tr>
+            <td>bot</td>
+            <td>The only channel that most bots should send messages in.</td>
+            <td>AQ==</td>
+            <td>Secondary</td>
+          </tr>
+          <tr>
+            <td>test</td>
+            <td>General radio testing (ping tests, "Can anyone hear me", etc.)</td>
+            <td>AQ==</td>
+            <td>Secondary</td>
+          </tr>
+          <tr>
+            <td>emergency</td>
+            <td>Channel for emergency traffic ONLY. <b>No channel is monitored 24/7. If you have an emergency, call 911</b>.</td>
+            <td>AQ==</td>
+            <td>Secondary</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
