@@ -1,0 +1,50 @@
+/* Shared styles for hardware/ pages */
+
+/* ---------- Hardware index cards ---------- */
+.hw-card .card-img-top { aspect-ratio: 16 / 9; object-fit: cover; background: #e9ecef; }
+.hw-card { transition: transform .15s ease, box-shadow .15s ease; }
+.hw-card:hover { transform: translateY(-3px); box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .12) !important; }
+
+/* ---------- Device pages ---------- */
+.hw-page section { margin-top: 3rem; }
+.hw-page h2 { font-weight: 700; margin-bottom: 1rem; }
+
+.hw-hero-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
+  background: #e9ecef;
+}
+
+/* Quick facts list */
+.hw-facts { border-radius: 1rem; overflow: hidden; }
+.hw-facts th { width: 40%; font-weight: 600; }
+
+/* Role cards: "good fit" / "works" / "not recommended" */
+.hw-role { border-radius: 1rem; height: 100%; padding: 1.25rem; border: 1px solid #dee2e6; }
+.hw-role h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: .5rem; }
+.hw-role .badge { font-weight: 600; }
+
+/* Photos and empty photo slots */
+.hw-photo { margin: 0; }
+.hw-photo img,
+.hw-photo .hw-photo-empty {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
+  background: #e9ecef;
+}
+.hw-photo .hw-photo-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  border: 2px dashed #ced4da;
+}
+.hw-photo figcaption { font-size: .875rem; color: #6c757d; margin-top: .5rem; }
+
+/* Bill of materials */
+.hw-bom td, .hw-bom th { vertical-align: middle; }
+.hw-bom .hw-cost { white-space: nowrap; text-align: end; }
