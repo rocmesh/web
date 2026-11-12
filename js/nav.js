@@ -56,6 +56,7 @@
               <li><a class="dropdown-item" href="${root}hardware/esp32.html">Heltec ESP32</a></li>
               <li><a class="dropdown-item" href="${root}hardware/t114.html">Heltec T114</a></li>
               <li><a class="dropdown-item" href="${root}hardware/x1.html">Seeed SenseCAP MeshTracker X1</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/t1000e.html">Seeed SenseCAP CardTracker T1000-E</a></li>
             </ul>
           </li>
           <li class="nav-item">

@@ -1,0 +1,192 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Seeed MeshTracker X1: what it is, its role on the mesh and where to buy it.">
+  <title>ROCMesh - MeshTracker X1</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/hardware.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main class="hw-page">
+    <div class="container py-vh-4">
+
+      <div class="row align-items-center g-5 mt-4">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-4 fw-bold">Seeed Studio SenseCAP MeshTracker X1</h1>
+          <p class="lead">
+            A waterproof, credit-card-sized tracker with GPS, USB-C, and a built in buzzer.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill text-bg-dark">MeshCore</span>
+            <span class="badge rounded-pill text-bg-dark">Meshtastic</span>
+            <span class="badge rounded-pill text-bg-secondary">Companion</span>
+            <span class="badge rounded-pill text-bg-secondary">Low power</span>
+            <span class="badge rounded-pill text-bg-light border">~$40-50</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <img class="hw-hero-img" src="../img/hardware/x1.jpg"
+            alt="Two Seeed X1 nodes with the Meshcore and Meshtastic logos on them">
+        </div>
+      </div>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          The SenseCAP MeshTracker X1 is a ready-made, credit-card-sized LoRa tracker from Seeed Studio.
+          Inside is Nordic's low-power nRF52840 chip, Semtech's newer LR2021 radio, dual-band GPS
+          and a 1100 mAh battery, all sealed in a waterproof case. It connects to your phone over
+          Bluetooth, and you use the MeshCore or Meshtastic app to send and read messages.
+        </p>
+        <p>
+          There's nothing to build. It arrives with the battery and antennas inside, and charges over USB-C.
+          There's no screen, so you set it up from the app. A single button, an LED, a buzzer and a
+          vibration motor give you status and alerts.
+        </p>
+
+        <table class="table hw-facts border mt-4 mb-0">
+          <tbody>
+            <tr><th scope="row">Processor</th><td>Nordic nRF52840 (Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech LR2021 LoRa, 863-928 MHz (covers US 915 MHz)</td></tr>
+            <tr><th scope="row">GPS</th><td>Built-in, dual-band (L1 + L5)</td></tr>
+            <tr><th scope="row">Screen</th><td>None (configured from the app)</td></tr>
+            <tr><th scope="row">Sensors</th><td>Barometer with temperature</td></tr>
+            <tr><th scope="row">Antenna</th><td>Internal, not replaceable</td></tr>
+            <tr><th scope="row">Battery</th><td>1100 mAh, up to 5 days per charge (Seeed's figure); charges over USB-C</td></tr>
+            <tr><th scope="row">Weatherproofing</th><td>IP66 (dust-tight, resists water jets)</td></tr>
+            <tr><th scope="row">Size and weight</th><td>90 x 57 x 8 mm, 45 g</td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Role in the mesh</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Companion</h3>
+              <p class="mb-0">
+                Pair it with your phone over Bluetooth and keep it in a wallet, pocket or bag.
+                It's the easiest way onto the mesh: no soldering, no case and no antenna to choose.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Location tracker</h3>
+              <p class="mb-0">
+                Dual-band GPS gives accurate fixes even between buildings. It's a good fit for
+                hiking, events, or sharing your position with family on the mesh.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-danger mb-2">Not recommended</span>
+              <h3>Repeater</h3>
+              <p class="mb-0">
+                The small internal antenna can't be upgraded, and the battery is sized for carrying,
+                not for running all the time. For a fixed site, use the <a href="repeater.html">Basic Repeater</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Where to buy and what it costs</h2>
+        <p>
+          Always buy the <b>915 MHz</b> version for use in the US.
+        </p>
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr><th>Seller</th><th>Notes</th><th class="text-end">Approx. price</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://www.seeedstudio.com/sensecap-meshtracker-x1-meshtastic-gps-tracker-p-6935.html" target="_blank" rel="noopener">Seeed Studio (official)</a></td>
+                <td>Cheapest, ships from China, and frequently backordered, so expect a few weeks</td>
+                <td class="text-end text-nowrap">$50</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small text-secondary">Prices last checked November 2026.</p>
+      </section>
+
+      <section id="setup">
+        <h2>Setup</h2>
+        <p>
+          Flash the firmware from a web browser (Chrome or Edge) with the board plugged in over USB-C,
+          then follow our recommended settings.
+        </p>
+        <ul>
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
+            then see <a href="../meshcore/companion-settings.html">MeshCore companion settings</a>.</li>
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
+            then see <a href="../meshtastic/companion-settings.html">Meshtastic companion settings</a>.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
