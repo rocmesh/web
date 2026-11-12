@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="Heltec T114: what it is, its role on the mesh, where to buy it, and the ROCMesh build.">
+  <meta name="description"
+    content="Heltec T114: what it is, its role on the mesh, where to buy it, and the ROCMesh build.">
   <title>ROCMesh - Heltec T114</title>
   <link rel="stylesheet" href="../css/theme.min.css">
   <link rel="stylesheet" href="../css/fonts.css">
@@ -48,20 +49,42 @@
           and a Semtech SX1262 radio. The nRF52840 sips power compared to ESP32-based boards,
           so a T114 on a modest battery can run for days. It connects to your phone over Bluetooth,
           and you use the MeshCore or Meshtastic app to send and read messages.
-
+        </p>
+        <p>
           It's sold as a bare board, optionally with a small 1.14" color screen and a GPS module.
           You add a battery, an antenna and a case, with suggestions linked below.
         </p>
 
         <table class="table hw-facts border mt-4 mb-0">
           <tbody>
-            <tr><th scope="row">Processor</th><td>Nordic nRF52840 (Bluetooth LE)</td></tr>
-            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa, 915 MHz (US)</td></tr>
-            <tr><th scope="row">Screen</th><td>Optional 1.14" color TFT</td></tr>
-            <tr><th scope="row">GPS</th><td>Optional add-on module</td></tr>
-            <tr><th scope="row">Antenna connector</th><td>IPEX (u.FL), so you need a pigtail adapter for an SMA antenna</td></tr>
-            <tr><th scope="row">Power</th><td>USB-C, or a 3.7 V LiPo battery with onboard charging</td></tr>
-            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
+            <tr>
+              <th scope="row">Processor</th>
+              <td>Nordic nRF52840 (Bluetooth LE)</td>
+            </tr>
+            <tr>
+              <th scope="row">Radio</th>
+              <td>Semtech SX1262 LoRa, 915 MHz (US)</td>
+            </tr>
+            <tr>
+              <th scope="row">Screen</th>
+              <td>Optional 1.14" color TFT</td>
+            </tr>
+            <tr>
+              <th scope="row">GPS</th>
+              <td>Optional add-on module</td>
+            </tr>
+            <tr>
+              <th scope="row">Antenna connector</th>
+              <td>IPEX (u.FL), so you need a pigtail adapter for an SMA antenna</td>
+            </tr>
+            <tr>
+              <th scope="row">Power</th>
+              <td>USB-C, or a 3.7 V LiPo battery with onboard charging</td>
+            </tr>
+            <tr>
+              <th scope="row">Firmware</th>
+              <td>MeshCore, Meshtastic</td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -112,21 +135,29 @@
         <div class="table-responsive">
           <table class="table align-middle">
             <thead>
-              <tr><th>Seller</th><th>Notes</th><th class="text-end">Approx. price</th></tr>
+              <tr>
+                <th>Seller</th>
+                <th>Notes</th>
+                <th class="text-end">Approx. price</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
-                <td><a href="https://heltec.org/project/mesh-node-t114/" target="_blank" rel="noopener">Heltec (official)</a></td>
+                <td><a href="https://heltec.org/project/mesh-node-t114/" target="_blank" rel="noopener">Heltec
+                    (official)</a></td>
                 <td>Cheapest, ships from China, so expect a few weeks</td>
                 <td class="text-end text-nowrap">$18-34</td>
               </tr>
               <tr>
-                <td><a href="https://store.rokland.com/products/heltec-mesh-node-t114-with-optional-1-14-inch-tft-display" target="_blank" rel="noopener">Rokland</a></td>
+                <td><a
+                    href="https://store.rokland.com/products/heltec-mesh-node-t114-with-optional-1-14-inch-tft-display"
+                    target="_blank" rel="noopener">Rokland</a></td>
                 <td>US reseller, faster shipping</td>
                 <td class="text-end text-nowrap">~$30-45</td>
               </tr>
               <tr>
-                <td><a href="https://muzi.works/products/heltec-t114-kit" target="_blank" rel="noopener">Muzi Works</a></td>
+                <td><a href="https://muzi.works/products/heltec-t114-kit" target="_blank" rel="noopener">Muzi Works</a>
+                </td>
                 <td>US kit with case, GPS and battery included</td>
                 <td class="text-end text-nowrap">~$57</td>
               </tr>
@@ -145,24 +176,32 @@
         <h2>The build</h2>
         <p>
           Our standard T114 companion: the board with screen, a LiPo battery, a stubby SMA antenna
-          on a pigtail, all in an included, transparent, injection-molded case. It fits in a pocket and lasts for days on a charge.
+          on a pigtail, all in an included, transparent, injection-molded case. It fits in a pocket and lasts for days
+          on a charge.
         </p>
 
         <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
         <div class="table-responsive">
           <table class="table hw-bom">
             <thead>
-              <tr><th>Part</th><th>Qty</th><th>Notes</th><th class="hw-cost">Approx. cost</th></tr>
+              <tr>
+                <th>Part</th>
+                <th>Qty</th>
+                <th>Notes</th>
+                <th class="hw-cost">Approx. cost</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
-                <td><a href="https://a.co/d/06YWIEbG" target="_blank" rel="noopener">Heltec T114 with screen, battery, case, and antenna</a></td>
+                <td><a href="https://a.co/d/06YWIEbG" target="_blank" rel="noopener">Heltec T114 with screen, battery,
+                    case, and antenna</a></td>
                 <td>1</td>
                 <td>Does not include GPS module</td>
                 <td class="hw-cost">$47</td>
               </tr>
               <tr>
-                <td><a href="https://heltec.org/project/l76-gnss-module/" target="_blank" rel="noopener">GPS Module</a></td>
+                <td><a href="https://heltec.org/project/l76-gnss-module/" target="_blank" rel="noopener">GPS Module</a>
+                </td>
                 <td>1</td>
                 <td>Optional</td>
                 <td class="hw-cost">$8</td>
@@ -179,7 +218,8 @@
         <ol>
           <li>Flash the firmware before putting it in the case (see <a href="#setup">Setup</a> below).</li>
           <li>Connect the pigtail to the board's IPEX connector. Press straight down until it clicks.</li>
-          <li>Mount the SMA end in the case and screw on the antenna. <b>Never power the radio without an antenna attached.</b></li>
+          <li>Mount the SMA end in the case and screw on the antenna. <b>Never power the radio without an antenna
+              attached.</b></li>
           <li>Check the battery polarity, plug it in, and close up the case.</li>
         </ol>
 
@@ -213,9 +253,11 @@
           then follow our recommended settings.
         </p>
         <ul>
-          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web
+              flasher</a>,
             then see <a href="../meshcore/companion-settings.html">MeshCore companion settings</a>.</li>
-          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web
+              flasher</a>,
             then see <a href="../meshtastic/companion-settings.html">Meshtastic companion settings</a>.</li>
         </ul>
       </section>
