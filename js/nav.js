@@ -4,6 +4,12 @@
   const root = new URL('..', s.src).href
 
   s.insertAdjacentHTML('beforebegin', `
+  <style>
+    /* Open nav dropdowns on hover for desktop pointers; touch/mobile keeps click */
+    @media (min-width: 992px) and (hover: hover) {
+      #navScroll .dropdown:hover > .dropdown-menu { display: block; margin-top: 0; }
+    }
+  </style>
   <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
     <div class="container">
       <a class="navbar-brand pe-4 fs-4" href="${root}index.html">
@@ -39,6 +45,17 @@
               <li><a class="dropdown-item" href="${root}meshtastic/channels.html">Channels</a></li>
               <li><a class="dropdown-item" href="${root}meshtastic/companion-settings.html">Companion Settings</a></li>
               <li><a class="dropdown-item" href="${root}meshtastic/infrastructure-settings.html">Infrastructure Settings</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link d-inline-block pe-1" href="${root}hardware/index.html">Hardware</a><a
+              class="nav-link dropdown-toggle d-inline-block ps-0" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" aria-label="Show hardware pages"></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="${root}hardware/repeater.html">Basic Repeater</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/esp32.html">Heltec ESP32</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/t114.html">Heltec T114</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/x1.html">Seeed SenseCAP MeshTracker X1</a></li>
             </ul>
           </li>
           <li class="nav-item">
