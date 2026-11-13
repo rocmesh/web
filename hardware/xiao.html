@@ -1,0 +1,263 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Seeed XIAO ESP32S3 & Wio-SX1262 kit: what it is, its role on the mesh, where to buy it, and the build.">
+  <title>ROCMesh - Seeed XIAO & WIO</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/hardware.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main class="hw-page">
+    <div class="container py-vh-4">
+
+      <div class="row align-items-center g-5 mt-4">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-4 fw-bold">Seeed Studio XIAO ESP32S3 & Wio-SX1262</h1>
+          <p class="lead">
+            A tiny, low-cost LoRa node in a ready-made case that makes a great always-on home base
+            for MeshCore or Meshtastic, for about the price of a pizza.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill text-bg-dark">MeshCore</span>
+            <span class="badge rounded-pill text-bg-dark">Meshtastic</span>
+            <span class="badge rounded-pill text-bg-secondary">Home base</span>
+            <span class="badge rounded-pill text-bg-secondary">Wi-Fi</span>
+            <span class="badge rounded-pill text-bg-light border">~$20-28</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <img class="hw-hero-img" src="../img/hardware/xiao.jpg"
+            alt="XIAO ESP32S3 and Wio-SX1262 kit in its black 3D-printed case, with USB-C port and SMA antenna connector">
+        </div>
+      </div>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          This kit from Seeed Studio pairs two thumbnail-sized boards: the XIAO ESP32S3, a small computer
+          with Wi-Fi and Bluetooth, and the Wio-SX1262, a LoRa radio that plugs on top of it.
+          Together they make a complete mesh node, and you use the MeshCore or Meshtastic app
+          to send and read messages over Bluetooth or Wi-Fi.
+        </p>
+        <p>
+          It comes in a 3D-printed case with an external 2 dBi antenna and a USB-C cable, so there's
+          no soldering. There's no screen, GPS or battery, which keeps it cheap. It's at its best
+          plugged into USB power somewhere in your home.
+        </p>
+
+        <table class="table hw-facts border mt-4 mb-0">
+          <tbody>
+            <tr><th scope="row">Processor</th><td>ESP32-S3, dual-core 240 MHz (Wi-Fi and Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa, 862–930 MHz (covers US 915 MHz)</td></tr>
+            <tr><th scope="row">Screen</th><td>None (configured from the app)</td></tr>
+            <tr><th scope="row">GPS</th><td>None, but a GPS module can be added</td></tr>
+            <tr><th scope="row">Antenna</th><td>Included 2 dBi external antenna on an SMA connector</td></tr>
+            <tr><th scope="row">Power</th><td>USB-C. Can charge a 3.7 V LiPo battery, but none is included</td></tr>
+            <tr><th scope="row">Size and weight</th><td>57 x 23 x 22 mm in its case, 37 g</td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Role in the mesh</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Home base companion</h3>
+              <p class="mb-0">
+                What it does best. Plug it into a USB charger near a window and leave it on.
+                Connect from your phone or computer over Bluetooth or Wi-Fi whenever you're home.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-warning mb-2">Works</span>
+              <h3>Repeater</h3>
+              <p class="mb-0">
+                Fine as an indoor repeater on USB power. The ESP32 uses too much power for
+                a small solar setup, though. For an outdoor site, see the <a href="repeater.html">Basic Repeater</a>.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-danger mb-2">Not recommended</span>
+              <h3>Pocket companion</h3>
+              <p class="mb-0">
+                There's no battery included, and the ESP32 drains one much faster than nRF52 boards.
+                To carry one with you, get a <a href="t114.html">T114</a> or <a href="t1000e.html">T1000-E</a> instead.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Where to buy and what it costs</h2>
+        <p>
+          Buy the kit <b>with the 3D-printed enclosure</b>. Seeed sells the same boards without it,
+          and the XIAO nRF52840 version uses a different Wio-SX1262 board, so make sure the listing says <b>ESP32S3</b>.
+        </p>
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr><th>Seller</th><th>Notes</th><th class="text-end">Approx. price</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://www.seeedstudio.com/XIAO-ESP32S3-for-Meshtastic-LoRa-with-3D-Printed-Enclosure-p-6314.html?__vid=A_261105" target="_blank" rel="noopener">Seeed Studio (official)</a></td>
+                <td>Cheapest, plus shipping and duties</td>
+                <td class="text-end text-nowrap">$20</td>
+              </tr>
+              <tr>
+                <td><a href="https://a.co/d/0bcI0ODP" target="_blank" rel="noopener">Amazon</a></td>
+                <td>Faster shipping</td>
+                <td class="text-end text-nowrap">$28</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small text-secondary">Prices last checked November 2026.</p>
+      </section>
+
+      <section>
+        <h2>The build</h2>
+        <p>
+          There's not much to build: the kit includes both boards, the case, the antenna and a USB-C cable.
+          Flash it, put it together, and plug it in.
+        </p>
+
+        <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
+        <div class="table-responsive">
+          <table class="table hw-bom">
+            <thead>
+              <tr><th>Part</th><th>Qty</th><th>Notes</th><th class="hw-cost">Approx. cost</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://www.seeedstudio.com/XIAO-ESP32S3-for-Meshtastic-LoRa-with-3D-Printed-Enclosure-p-6314.html?__vid=A_261105" target="_blank" rel="noopener">XIAO ESP32S3 & Wio-SX1262 kit with enclosure</a></td>
+                <td>1</td>
+                <td>Includes case, 2 dBi antenna and USB-C cable</td>
+                <td class="hw-cost">$20</td>
+              </tr>
+              <tr>
+                <td>USB power adapter</td>
+                <td>1</td>
+                <td>Any phone charger works</td>
+                <td class="hw-cost">$0</td>
+              </tr>
+              <tr class="fw-bold">
+                <td colspan="3">Total</td>
+                <td class="hw-cost">~$20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="h5 fw-bold mt-4">Assembly notes</h3>
+        <ol>
+          <li>Flash the firmware before you close up the case (see <a href="#setup">Setup</a> below).
+            The kit may arrive with gateway firmware rather than MeshCore or Meshtastic.</li>
+          <li>If the boards aren't already joined, press the Wio-SX1262 onto the XIAO's board-to-board connector.</li>
+          <li>Connect the antenna and screw it on. <b>Never power the radio without an antenna attached.</b></li>
+          <li>Close the case and plug it into USB power.</li>
+        </ol>
+
+        <h3 class="h5 fw-bold mt-4">Photos</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/xiao.jpg" alt="The kit in its 3D-printed case">
+              <figcaption>In its case</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <div class="hw-photo-empty">Photo coming soon</div>
+              <figcaption>What's in the box</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <div class="hw-photo-empty">Photo coming soon</div>
+              <figcaption>Set up at home</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="setup">
+        <h2>Setup</h2>
+        <p>
+          Flash the firmware from a web browser (Chrome or Edge) with the kit plugged in over USB-C,
+          then follow our recommended settings. Choose the <b>Seeed XIAO ESP32S3 / Wio-SX1262</b> target in the flasher.
+        </p>
+        <ul>
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
+            then see <a href="../meshcore/companion-settings.html">MeshCore companion settings</a>.</li>
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
+            then see <a href="../meshtastic/companion-settings.html">Meshtastic companion settings</a>.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
