@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="Device Name: what it is, its role on the mesh, where to buy it, and the ROCMesh build.">
-  <title>ROCMesh - Device Name</title>
+  <meta name="description" content="Heltec ESP32V3: what it is, its role in the mesh, where to buy it, and how to build one.">
+  <title>ROCMesh - Heltec ESP32V3</title>
   <link rel="stylesheet" href="../css/theme.min.css">
   <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/hardware.css">
@@ -19,43 +19,54 @@
   <main class="hw-page">
     <div class="container py-vh-4">
 
-      <div class="row align-items-center g-5 mt-4">
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
         <div class="col-12 col-lg-6">
-          <h1 class="display-4 fw-bold">Device Name</h1>
+          <h1 class="display-4 fw-bold">Heltec ESP32V3</h1>
           <p class="lead">
-            One-sentence tagline describing the device and what it's best at.
+            A cheap, popular LoRa board with a built-in screen and Wi-Fi. It's a flexible starting point
+            for almost any MeshCore or Meshtastic build.
           </p>
 
           <div class="d-flex flex-wrap gap-2">
-            <span class="badge rounded-pill text-bg-dark">Firmware</span>
-            <span class="badge rounded-pill text-bg-secondary">Role</span>
-            <span class="badge rounded-pill text-bg-secondary">Feature</span>
-            <span class="badge rounded-pill text-bg-light border">~$Price</span>
+            <span class="badge rounded-pill text-bg-dark">MeshCore</span>
+            <span class="badge rounded-pill text-bg-dark">Meshtastic</span>
+            <span class="badge rounded-pill text-bg-secondary">Home base</span>
+            <span class="badge rounded-pill text-bg-secondary">Wi-Fi</span>
+            <span class="badge rounded-pill text-bg-light border">~$18-30</span>
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <img class="hw-hero-img" src="../img/hardware/device-web.jpg" alt="Photo description">
+          <img class="hw-hero-img" src="../img/hardware/esp32v3-web.jpg" style="--focus: 50% 40%"
+            alt="Three Heltec ESP32V3 builds in green 3D-printed cases with antennas">
         </div>
       </div>
 
       <section>
         <h2>What it is</h2>
         <p>
-          Describe what the device is, who makes it, and what's inside.
+          The Heltec WiFi LoRa 32 V3, usually just called the "Heltec V3", is one of the most common boards on
+          the mesh. It pairs an ESP32-S3 chip, which has Wi-Fi and Bluetooth, with a Semtech SX1262 LoRa radio
+          and a small 0.96" OLED screen. You can read messages right on the screen, or connect from the
+          MeshCore or Meshtastic app over Bluetooth or Wi-Fi.
         </p>
         <p>
-          Describe how it's sold and what you need to add to get it running.
+          It's sold as a bare board. You add an antenna, a case, and if you want to carry it, a battery.
+          Because it's cheap and well supported, it's the board most people use for custom builds,
+          from handhelds to home base stations.
         </p>
 
         <table class="table hw-facts border mt-4 mb-0">
           <tbody>
-            <tr><th scope="row">Processor</th><td>Processor</td></tr>
-            <tr><th scope="row">Radio</th><td>Radio chip and frequency</td></tr>
-            <tr><th scope="row">Screen</th><td>Screen</td></tr>
-            <tr><th scope="row">GPS</th><td>GPS</td></tr>
-            <tr><th scope="row">Antenna</th><td>Antenna</td></tr>
-            <tr><th scope="row">Power</th><td>Power and battery</td></tr>
-            <tr><th scope="row">Firmware</th><td>Supported firmware</td></tr>
+            <tr><th scope="row">Processor</th><td>ESP32-S3 (Wi-Fi and Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa, 902-928 MHz (US)</td></tr>
+            <tr><th scope="row">Screen</th><td>0.96" OLED</td></tr>
+            <tr><th scope="row">GPS</th><td>None, but a GPS module can be added</td></tr>
+            <tr><th scope="row">Antenna</th><td>External, on an IPEX (u.FL) connector. Use a pigtail adapter for an SMA antenna</td></tr>
+            <tr><th scope="row">Power</th><td>USB-C, or a 3.7 V LiPo battery with onboard charging</td></tr>
+            <tr><th scope="row">Documentation</th><td><a href="https://wiki.heltec.org/docs/devices/open-source-hardware/esp32-series/lora-32/wifi-lora-32-v3/" target="_blank" rel="noopener">Heltec wiki</a></td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
           </tbody>
         </table>
       </section>
@@ -66,27 +77,30 @@
           <div class="col">
             <div class="hw-role">
               <span class="badge text-bg-success mb-2">Recommended</span>
-              <h3>Role</h3>
+              <h3>Home base companion</h3>
               <p class="mb-0">
-                Why this device is a good fit for this role.
+                Plug it into USB power near a window and leave it on. The screen shows new messages at a glance,
+                and Wi-Fi lets you connect from your computer as well as your phone.
               </p>
             </div>
           </div>
           <div class="col">
             <div class="hw-role">
               <span class="badge text-bg-warning mb-2">Works</span>
-              <h3>Role</h3>
+              <h3>Pocket companion</h3>
               <p class="mb-0">
-                How well this device works in this role, and its limits.
+                With a battery and a case it makes a capable handheld, but the ESP32 drains batteries
+                much faster than nRF52 boards. For multi-day battery life, see the <a href="t114.html">Heltec T114</a>.
               </p>
             </div>
           </div>
           <div class="col">
             <div class="hw-role">
               <span class="badge text-bg-danger mb-2">Not recommended</span>
-              <h3>Role</h3>
+              <h3>Solar repeater</h3>
               <p class="mb-0">
-                Why this device isn't a good fit for this role, and what to use instead.
+                It uses too much power to run reliably from a small solar panel. Fine as an indoor repeater
+                on USB power, but for an outdoor site, use the <a href="repeater.html">Basic Repeater</a>.
               </p>
             </div>
           </div>
@@ -96,7 +110,8 @@
       <section>
         <h2>Where to buy and what it costs</h2>
         <p>
-          Buying advice, such as which frequency version to choose and which options affect the price.
+          Always buy the <b>915 MHz</b> version for use in the US. Heltec makes a version for each region,
+          and the others won't work legally or well here.
         </p>
         <div class="table-responsive">
           <table class="table align-middle">
@@ -105,19 +120,19 @@
             </thead>
             <tbody>
               <tr>
-                <td><a href="#" target="_blank" rel="noopener">Seller</a></td>
-                <td>Notes</td>
-                <td class="text-end text-nowrap">$0</td>
+                <td><a href="https://heltec.org/project/wifi-lora-32-v3/" target="_blank" rel="noopener">Heltec (official)</a></td>
+                <td>Bare board. Cheapest, but ships from China, so expect a few weeks</td>
+                <td class="text-end text-nowrap">$18-22</td>
               </tr>
               <tr>
-                <td><a href="#" target="_blank" rel="noopener">Seller</a></td>
-                <td>Notes</td>
-                <td class="text-end text-nowrap">$0</td>
+                <td><a href="https://store.rokland.com/products/heltec-wifi-lora-32v3" target="_blank" rel="noopener">Rokland</a></td>
+                <td>US reseller. Faster shipping, with an optional case</td>
+                <td class="text-end text-nowrap">$27-30</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="small text-secondary">Prices last checked Month Year.</p>
+        <p class="small text-secondary">Prices last checked November 2026.</p>
       </section>
 
       <section>
@@ -134,10 +149,10 @@
             </thead>
             <tbody>
               <tr>
-                <td><a href="#" target="_blank" rel="noopener">Part</a></td>
+                <td><a href="https://heltec.org/project/wifi-lora-32-v3/" target="_blank" rel="noopener">Heltec WiFi LoRa 32 V3, 915 MHz</a></td>
                 <td>1</td>
-                <td>Notes</td>
-                <td class="hw-cost">$0</td>
+                <td>Bare board</td>
+                <td class="hw-cost">$20</td>
               </tr>
               <tr>
                 <td><a href="#" target="_blank" rel="noopener">Part</a></td>
@@ -147,7 +162,7 @@
               </tr>
               <tr class="fw-bold">
                 <td colspan="3">Total</td>
-                <td class="hw-cost">~$0</td>
+                <td class="hw-cost">$0</td>
               </tr>
             </tbody>
           </table>
@@ -155,7 +170,7 @@
 
         <h3 class="h5 fw-bold mt-4">Assembly notes</h3>
         <ol>
-          <li>Step one.</li>
+          <li>Flash the firmware before putting it in the case (see <a href="#setup">Setup</a> below).</li>
           <li>Step two.</li>
           <li>Step three.</li>
         </ol>
@@ -164,8 +179,8 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <figure class="hw-photo">
-              <div class="hw-photo-empty">Photo coming soon</div>
-              <figcaption>Caption</figcaption>
+              <img src="../img/hardware/esp32v3-web.jpg" style="--focus: 50% 40%" alt="Three finished Heltec ESP32V3 builds">
+              <figcaption>Finished builds</figcaption>
             </figure>
           </div>
           <div class="col">
@@ -186,7 +201,9 @@
       <section id="setup">
         <h2>Setup</h2>
         <p>
-          How to flash the firmware and get the device running.
+          Flash the firmware from a web browser (Chrome or Edge) with the Heltec V3 plugged in over USB-C,
+          then follow our recommended settings.
+          In Meshtastic, turning on Wi-Fi turns off Bluetooth, so pick whichever you'll connect with.
         </p>
         <ul>
           <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,

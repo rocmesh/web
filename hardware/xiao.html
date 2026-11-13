@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="Seeed XIAO ESP32S3 & Wio-SX1262 kit: what it is, its role on the mesh, where to buy it, and the build.">
-  <title>ROCMesh - Seeed XIAO & WIO</title>
+  <meta name="description" content="Seeed XIAO ESP32S3 & Wio-SX1262: what it is, its role in the mesh, where to buy it, and how to build one.">
+  <title>ROCMesh - Seeed XIAO ESP32S3 & Wio-SX1262</title>
   <link rel="stylesheet" href="../css/theme.min.css">
   <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/hardware.css">
@@ -19,9 +19,11 @@
   <main class="hw-page">
     <div class="container py-vh-4">
 
-      <div class="row align-items-center g-5 mt-4">
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
         <div class="col-12 col-lg-6">
-          <h1 class="display-4 fw-bold">Seeed Studio XIAO ESP32S3 & Wio-SX1262</h1>
+          <h1 class="display-4 fw-bold">Seeed XIAO ESP32S3 & Wio-SX1262</h1>
           <p class="lead">
             A tiny, low-cost LoRa node in a ready-made case that makes a great always-on home base
             for MeshCore or Meshtastic, for about the price of a pizza.
@@ -32,7 +34,7 @@
             <span class="badge rounded-pill text-bg-dark">Meshtastic</span>
             <span class="badge rounded-pill text-bg-secondary">Home base</span>
             <span class="badge rounded-pill text-bg-secondary">Wi-Fi</span>
-            <span class="badge rounded-pill text-bg-light border">~$20-28</span>
+            <span class="badge rounded-pill text-bg-light border">~$11-28</span>
           </div>
         </div>
         <div class="col-12 col-lg-6">
@@ -58,12 +60,13 @@
         <table class="table hw-facts border mt-4 mb-0">
           <tbody>
             <tr><th scope="row">Processor</th><td>ESP32-S3, dual-core 240 MHz (Wi-Fi and Bluetooth LE 5.0)</td></tr>
-            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa, 862–930 MHz (covers US 915 MHz)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa, 862-930 MHz (covers US 915 MHz)</td></tr>
             <tr><th scope="row">Screen</th><td>None (configured from the app)</td></tr>
             <tr><th scope="row">GPS</th><td>None, but a GPS module can be added</td></tr>
             <tr><th scope="row">Antenna</th><td>Included 2 dBi external antenna on an SMA connector</td></tr>
             <tr><th scope="row">Power</th><td>USB-C. Can charge a 3.7 V LiPo battery, but none is included</td></tr>
             <tr><th scope="row">Size and weight</th><td>57 x 23 x 22 mm in its case, 37 g</td></tr>
+            <tr><th scope="row">Documentation</th><td><a href="https://wiki.seeedstudio.com/wio_sx1262_with_xiao_esp32s3_kit/" target="_blank" rel="noopener">Seeed wiki</a></td></tr>
             <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
           </tbody>
         </table>
@@ -108,8 +111,8 @@
       <section>
         <h2>Where to buy and what it costs</h2>
         <p>
-          Buy the kit <b>with the 3D-printed enclosure</b>. Seeed sells the same boards without it,
-          and the XIAO nRF52840 version uses a different Wio-SX1262 board, so make sure the listing says <b>ESP32S3</b>.
+          We recommend the kit <b>with the 3D-printed enclosure</b>, which includes the case and antenna.
+          The XIAO nRF52840 version uses a different Wio-SX1262 board, so make sure the listing says <b>ESP32S3</b>.
         </p>
         <div class="table-responsive">
           <table class="table align-middle">
@@ -118,9 +121,14 @@
             </thead>
             <tbody>
               <tr>
-                <td><a href="https://www.seeedstudio.com/XIAO-ESP32S3-for-Meshtastic-LoRa-with-3D-Printed-Enclosure-p-6314.html?__vid=A_261105" target="_blank" rel="noopener">Seeed Studio (official)</a></td>
-                <td>Cheapest, plus shipping and duties</td>
+                <td><a href="https://www.seeedstudio.com/XIAO-ESP32S3-for-Meshtastic-LoRa-with-3D-Printed-Enclosure-p-6314.html" target="_blank" rel="noopener">Seeed Studio (official)</a></td>
+                <td>Official store. Kit with case and antenna</td>
                 <td class="text-end text-nowrap">$20</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank" rel="noopener">Seeed Studio (boards only)</a></td>
+                <td>Cheapest. Boards only, so you supply your own case and antenna</td>
+                <td class="text-end text-nowrap">$11</td>
               </tr>
               <tr>
                 <td><a href="https://a.co/d/0bcI0ODP" target="_blank" rel="noopener">Amazon</a></td>
@@ -148,9 +156,9 @@
             </thead>
             <tbody>
               <tr>
-                <td><a href="https://www.seeedstudio.com/XIAO-ESP32S3-for-Meshtastic-LoRa-with-3D-Printed-Enclosure-p-6314.html?__vid=A_261105" target="_blank" rel="noopener">XIAO ESP32S3 & Wio-SX1262 kit with enclosure</a></td>
+                <td><a href="https://www.seeedstudio.com/XIAO-ESP32S3-for-Meshtastic-LoRa-with-3D-Printed-Enclosure-p-6314.html" target="_blank" rel="noopener">XIAO ESP32S3 & Wio-SX1262 kit with enclosure</a></td>
                 <td>1</td>
-                <td>Includes case, 2 dBi antenna and USB-C cable</td>
+                <td>Includes case, 2 dBi antenna, and USB-C cable</td>
                 <td class="hw-cost">$20</td>
               </tr>
               <tr>
@@ -161,7 +169,7 @@
               </tr>
               <tr class="fw-bold">
                 <td colspan="3">Total</td>
-                <td class="hw-cost">~$20</td>
+                <td class="hw-cost">$20</td>
               </tr>
             </tbody>
           </table>
@@ -180,13 +188,13 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <figure class="hw-photo">
-              <img src="../img/hardware/xiao.jpg" alt="The kit in its 3D-printed case">
+              <img src="../img/hardware/xiao.jpg" alt="The kit in its black 3D-printed case">
               <figcaption>In its case</figcaption>
             </figure>
           </div>
           <div class="col">
             <figure class="hw-photo">
-              <img src="../img/hardware/xiao_internal.jpg" alt="The boards">
+              <img src="../img/hardware/xiao_internal.jpg" alt="The XIAO ESP32S3 and Wio-SX1262 boards out of the case">
               <figcaption>The boards</figcaption>
             </figure>
           </div>
@@ -202,8 +210,8 @@
       <section id="setup">
         <h2>Setup</h2>
         <p>
-          Flash the firmware from a web browser (Chrome or Edge) with the kit plugged in over USB-C,
-          then follow our recommended settings. Choose the <b>Seeed XIAO ESP32S3 / Wio-SX1262</b> target in the flasher.
+          Flash the firmware from a web browser (Chrome or Edge) with the XIAO plugged in over USB-C,
+          then follow our recommended settings. In the flasher, pick the XIAO ESP32S3 with Wio-SX1262 from the device list.
         </p>
         <ul>
           <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
