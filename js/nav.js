@@ -53,10 +53,11 @@
               aria-expanded="false" aria-label="Show hardware pages"></a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="${root}hardware/repeater.html">Basic Repeater</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/esp32.html">Heltec ESP32</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/esp32v3.html">Heltec ESP32V3</a></li>
               <li><a class="dropdown-item" href="${root}hardware/t114.html">Heltec T114</a></li>
               <li><a class="dropdown-item" href="${root}hardware/x1.html">Seeed SenseCAP MeshTracker X1</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/t1000e.html">Seeed SenseCAP CardTracker T1000-E</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/t1000e.html">Seeed SenseCAP Card Tracker T1000-E</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/xiao.html">Seeed XIAO ESP32S3 & Wio-SX1262</a></li>
             </ul>
           </li>
           <li class="nav-item">

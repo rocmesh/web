@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <meta name="description"
-    content="Heltec T114: what it is, its role on the mesh, where to buy it, and the ROCMesh build.">
+    content="Heltec T114: what it is, its role in the mesh, where to buy it, and how to build one.">
   <title>ROCMesh - Heltec T114</title>
   <link rel="stylesheet" href="../css/theme.min.css">
   <link rel="stylesheet" href="../css/fonts.css">
@@ -20,7 +20,9 @@
   <main class="hw-page">
     <div class="container py-vh-4">
 
-      <div class="row align-items-center g-5 mt-4">
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
         <div class="col-12 col-lg-6">
           <h1 class="display-4 fw-bold">Heltec T114</h1>
           <p class="lead">
@@ -33,7 +35,7 @@
             <span class="badge rounded-pill text-bg-dark">Meshtastic</span>
             <span class="badge rounded-pill text-bg-secondary">Companion</span>
             <span class="badge rounded-pill text-bg-secondary">Low power</span>
-            <span class="badge rounded-pill text-bg-light border">~$20-35</span>
+            <span class="badge rounded-pill text-bg-light border">~$18-57</span>
           </div>
         </div>
         <div class="col-12 col-lg-6">
@@ -59,7 +61,7 @@
           <tbody>
             <tr>
               <th scope="row">Processor</th>
-              <td>Nordic nRF52840 (Bluetooth LE)</td>
+              <td>Nordic nRF52840 (Bluetooth LE 5.0)</td>
             </tr>
             <tr>
               <th scope="row">Radio</th>
@@ -74,12 +76,16 @@
               <td>Optional add-on module</td>
             </tr>
             <tr>
-              <th scope="row">Antenna connector</th>
-              <td>IPEX (u.FL), so you need a pigtail adapter for an SMA antenna</td>
+              <th scope="row">Antenna</th>
+              <td>External, on an IPEX (u.FL) connector. Use a pigtail adapter for an SMA antenna</td>
             </tr>
             <tr>
               <th scope="row">Power</th>
               <td>USB-C, or a 3.7 V LiPo battery with onboard charging</td>
+            </tr>
+            <tr>
+              <th scope="row">Documentation</th>
+              <td><a href="https://heltec.org/project/mesh-node-t114/" target="_blank" rel="noopener">Heltec product page</a></td>
             </tr>
             <tr>
               <th scope="row">Firmware</th>
@@ -119,7 +125,8 @@
               <h3>Wi-Fi bridge</h3>
               <p class="mb-0">
                 The nRF52840 has no Wi-Fi. If you need a node that talks to the internet,
-                use an <a href="esp32.html">ESP32 board</a> instead.
+                use an ESP32 board like the <a href="esp32v3.html">Heltec ESP32V3</a> or
+                <a href="xiao.html">XIAO ESP32S3</a> instead.
               </p>
             </div>
           </div>
@@ -145,26 +152,26 @@
               <tr>
                 <td><a href="https://heltec.org/project/mesh-node-t114/" target="_blank" rel="noopener">Heltec
                     (official)</a></td>
-                <td>Cheapest, ships from China, so expect a few weeks</td>
+                <td>Bare board. Cheapest, but ships from China, so expect a few weeks</td>
                 <td class="text-end text-nowrap">$18-34</td>
               </tr>
               <tr>
                 <td><a
                     href="https://store.rokland.com/products/heltec-mesh-node-t114-with-optional-1-14-inch-tft-display"
                     target="_blank" rel="noopener">Rokland</a></td>
-                <td>US reseller, faster shipping</td>
-                <td class="text-end text-nowrap">~$30-45</td>
+                <td>US reseller. Faster shipping</td>
+                <td class="text-end text-nowrap">$30-45</td>
               </tr>
               <tr>
                 <td><a href="https://muzi.works/products/heltec-t114-kit" target="_blank" rel="noopener">Muzi Works</a>
                 </td>
-                <td>US kit with case, GPS and battery included</td>
-                <td class="text-end text-nowrap">~$57</td>
+                <td>US kit with case, GPS, and battery included</td>
+                <td class="text-end text-nowrap">$57</td>
               </tr>
               <tr>
                 <td><a href="https://a.co/d/06YWIEbG" target="_blank" rel="noopener">Amazon</a></td>
-                <td>US kit with case, battery, and antenna included. Purchase GPS module separately</td>
-                <td class="text-end text-nowrap">~$47</td>
+                <td>Kit with case, battery, and antenna included. GPS module sold separately</td>
+                <td class="text-end text-nowrap">$47</td>
               </tr>
             </tbody>
           </table>
@@ -175,9 +182,9 @@
       <section>
         <h2>The build</h2>
         <p>
-          Our standard T114 companion: the board with screen, a LiPo battery, a stubby SMA antenna
-          on a pigtail, all in an included, transparent, injection-molded case. It fits in a pocket and lasts for days
-          on a charge.
+          Our standard T114 companion: the board with screen, a LiPo battery, and a stubby SMA antenna
+          on a pigtail, all in a transparent injection-molded case that comes with the kit. It fits in a pocket
+          and lasts for days on a charge.
         </p>
 
         <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
@@ -200,7 +207,7 @@
                 <td class="hw-cost">$47</td>
               </tr>
               <tr>
-                <td><a href="https://heltec.org/project/l76-gnss-module/" target="_blank" rel="noopener">GPS Module</a>
+                <td><a href="https://heltec.org/project/l76-gnss-module/" target="_blank" rel="noopener">Heltec L76K GPS module</a>
                 </td>
                 <td>1</td>
                 <td>Optional</td>
@@ -208,7 +215,7 @@
               </tr>
               <tr class="fw-bold">
                 <td colspan="3">Total</td>
-                <td class="hw-cost">~$55</td>
+                <td class="hw-cost">$55</td>
               </tr>
             </tbody>
           </table>
@@ -233,8 +240,8 @@
           </div>
           <div class="col">
             <figure class="hw-photo">
-              <div class="hw-photo-empty">Photo coming soon</div>
-              <figcaption>Parts laid out</figcaption>
+              <img src="../img/hardware/t114_kit.jpg" alt="The T114 kit with board, case, battery, and antenna">
+              <figcaption>The kit</figcaption>
             </figure>
           </div>
           <div class="col">
@@ -249,7 +256,7 @@
       <section id="setup">
         <h2>Setup</h2>
         <p>
-          Flash the firmware from a web browser (Chrome or Edge) with the board plugged in over USB-C,
+          Flash the firmware from a web browser (Chrome or Edge) with the T114 plugged in over USB-C,
           then follow our recommended settings.
         </p>
         <ul>

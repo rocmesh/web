@@ -1,7 +1,7 @@
 /* Shared styles for hardware/ pages */
 
 /* ---------- Hardware index cards ---------- */
-.hw-card .card-img-top { aspect-ratio: 16 / 9; object-fit: cover; background: #e9ecef; }
+.hw-card .card-img-top { aspect-ratio: 4 / 3; object-fit: cover; object-position: var(--focus, 50% 50%); background: #e9ecef; }
 .hw-card { transition: transform .15s ease, box-shadow .15s ease; }
 .hw-card:hover { transform: translateY(-3px); box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .12) !important; }
 
@@ -13,6 +13,7 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: var(--focus, 50% 50%);
   border-radius: 1rem;
   background: #e9ecef;
 }
@@ -33,6 +34,7 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: var(--focus, 50% 50%);
   border-radius: 1rem;
   background: #e9ecef;
 }
