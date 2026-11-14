@@ -1,0 +1,269 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Heltec ESP32V4: what it is, its role in the mesh, where to buy it, and how to build one.">
+  <title>ROCMesh - Heltec ESP32V4</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/hardware.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main class="hw-page">
+    <div class="container py-vh-4">
+
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-4 fw-bold">Heltec ESP32V4</h1>
+          <p class="lead">
+            The Heltec V3's successor, with a much stronger radio, solar input and a GPS connector,
+            for about the same price.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill hw-tag hw-tag-meshcore">MeshCore</span>
+            <span class="badge rounded-pill hw-tag hw-tag-meshtastic">Meshtastic</span>
+            <span class="badge rounded-pill hw-tag hw-tag-role">Home base</span>
+            <span class="badge rounded-pill hw-tag hw-tag-high-power">High power</span>
+            <span class="badge rounded-pill hw-tag hw-tag-price">~$18-28</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <img class="hw-hero-img" src="../img/hardware/esp32v4-web.jpg"
+            alt="A bare Heltec ESP32V4 board with its screen and included LoRa antenna">
+        </div>
+      </div>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          The Heltec WiFi LoRa 32 V4 is the newest version of the popular <a href="esp32v3.html">Heltec V3</a>.
+          It keeps the same idea: an ESP32-S3 chip with Wi-Fi and Bluetooth, a Semtech SX1262 LoRa radio
+          and a small 0.96" OLED screen. The V4 adds a power amplifier that roughly quintuples transmit power
+          (28 dBm, up from 21 dBm on the V3), a connector for a solar panel and a plug-in port for a GPS module.
+        </p>
+        <p>
+          It's sold as a bare board with a basic LoRa antenna. You add a case and, if you want to carry it or
+          run it on solar, a battery. The size and pin layout are close to the V3, but many V3 cases and add-ons
+          don't fit or work, so check before you reuse them.
+        </p>
+
+        <table class="table hw-facts border mt-4 mb-0">
+          <tbody>
+            <tr><th scope="row">Processor</th><td>ESP32-S3 (Wi-Fi and Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa with power amplifier, up to 28 dBm, 902-928 MHz (US)</td></tr>
+            <tr><th scope="row">Screen</th><td>0.96" OLED, or a cheaper no-screen version</td></tr>
+            <tr><th scope="row">GPS</th><td>None built in, but has a plug-in port for Heltec's L76K GPS module</td></tr>
+            <tr><th scope="row">Antenna</th><td>External, on an IPEX (u.FL) connector. A basic LoRa antenna is included</td></tr>
+            <tr><th scope="row">Power</th><td>USB-C, a 3.7 V LiPo battery with onboard charging, or a 5-6 V solar panel</td></tr>
+            <tr><th scope="row">Size</th><td>51.7 x 25.4 x 10.7 mm</td></tr>
+            <tr><th scope="row">Documentation</th><td><a href="https://wiki.heltec.org/docs/devices/open-source-hardware/esp32-series/lora-32/wifi-lora-32-v4/" target="_blank" rel="noopener">Heltec wiki</a></td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Role in the mesh</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Home base companion</h3>
+              <p class="mb-0">
+                Plug it into USB power near a window and leave it on. The stronger radio reaches further
+                than the V3, the screen shows new messages at a glance, and Wi-Fi lets you connect from your computer.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-works mb-2">Works</span>
+              <h3>Solar repeater</h3>
+              <p class="mb-0">
+                Built-in solar charging and high transmit power make it a capable repeater, but the ESP32 needs a
+                bigger panel and battery than nRF52 boards. For a simple outdoor site, see the <a href="repeater.html">Basic Repeater</a>.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-works mb-2">Works</span>
+              <h3>Pocket companion</h3>
+              <p class="mb-0">
+                Add a battery and a case and it makes a capable handheld, and there are plenty of case designs to choose from.
+                Expect to charge it daily, though: the ESP32 and high-power radio drain batteries much faster than nRF52 boards.
+                For multi-day battery life, see the <a href="t114.html">Heltec T114</a> or <a href="t1000e.html">T1000-E</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Where to buy and what it costs</h2>
+        <p>
+          Always choose the <b>902-928 MHz</b> band for use in the US. Heltec sells two chip options, the standard
+          V4 and the V4-R8 with more memory. Either works, but <b>note which one you bought</b>, because each needs its
+          own firmware. Pick the US warehouse for faster shipping.
+        </p>
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr><th>Seller</th><th>Notes</th><th class="text-end">Approx. price</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://heltec.org/project/wifi-lora-32-v4/" target="_blank" rel="noopener">Heltec (official)</a></td>
+                <td>Bare board with LoRa antenna. Ships from a US warehouse if you choose it</td>
+                <td class="text-end text-nowrap">$18-28</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small text-secondary">Prices last checked November 2026.</p>
+      </section>
+
+      <section>
+        <h2>The build</h2>
+        <p>
+          Describe the build and what it's made of.
+        </p>
+
+        <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
+        <div class="table-responsive">
+          <table class="table hw-bom">
+            <thead>
+              <tr><th>Part</th><th>Qty</th><th>Notes</th><th class="hw-cost">Approx. cost</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://heltec.org/project/wifi-lora-32-v4/" target="_blank" rel="noopener">Heltec WiFi LoRa 32 V4, 902-928 MHz</a></td>
+                <td>1</td>
+                <td>Includes a basic LoRa antenna</td>
+                <td class="hw-cost">$20</td>
+              </tr>
+              <tr>
+                <td><a href="https://heltec.org/project/l76-gnss-module/" target="_blank" rel="noopener">Heltec L76K GPS module</a></td>
+                <td>1</td>
+                <td>Optional. Plugs into the GPS port</td>
+                <td class="hw-cost">$8</td>
+              </tr>
+              <tr>
+                <td><a href="#" target="_blank" rel="noopener">Part</a></td>
+                <td>1</td>
+                <td>Notes</td>
+                <td class="hw-cost">$0</td>
+              </tr>
+              <tr class="fw-bold">
+                <td colspan="3">Total</td>
+                <td class="hw-cost">$0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="h5 fw-bold mt-4">Assembly notes</h3>
+        <ol>
+          <li>Flash the firmware before putting it in the case (see <a href="#setup">Setup</a> below).</li>
+          <li>Connect the antenna to the IPEX connector. Press straight down until it clicks.
+            <b>Never power the radio without an antenna attached.</b></li>
+          <li>Step three.</li>
+        </ol>
+
+        <h3 class="h5 fw-bold mt-4">Photos</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/esp32v4-web.jpg" alt="A bare Heltec ESP32V4 board with its included antenna">
+              <figcaption>Out of the box</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <div class="hw-photo-empty">Photo coming soon</div>
+              <figcaption>Caption</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <div class="hw-photo-empty">Photo coming soon</div>
+              <figcaption>Caption</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="setup">
+        <h2>Setup</h2>
+        <p>
+          Flash the firmware from a web browser (Chrome or Edge) with the Heltec V4 plugged in over USB-C,
+          then follow our recommended settings. In the flasher, pick <b>Heltec V4</b> or <b>Heltec V4-R8</b> to match
+          the board you bought. Flashing the wrong one won't work. If the flasher can't find the board, hold the
+          PRG button, press RST once, then let go of PRG and try again.
+        </p>
+        <ul>
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
+            then see <a href="../meshcore/companion-settings.html">MeshCore companion settings</a>.</li>
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
+            then see <a href="../meshtastic/companion-settings.html">Meshtastic companion settings</a>.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

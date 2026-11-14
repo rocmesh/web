@@ -50,3 +50,18 @@
 /* Bill of materials */
 .hw-bom td, .hw-bom th { vertical-align: middle; }
 .hw-bom .hw-cost { white-space: nowrap; text-align: end; }
+
+/* Rounded tags at the top of each device page */
+.hw-tag { font-weight: 600; }
+.hw-tag-meshcore   { background-color: #13192a; color: #fff; }
+.hw-tag-meshtastic { background-color: #67EA94; color: #13192a; }
+.hw-tag-role       { background-color: #dbe7ff; color: #1e3a8a; }
+.hw-tag-low-power  { background-color: #d5f2ec; color: #0f5e52; }
+.hw-tag-high-power { background-color: #ffe2d1; color: #9a3412; }
+.hw-tag-wifi       { background-color: #ece3ff; color: #5b21b6; }
+.hw-tag-feature    { background-color: #e9ecef; color: #343a40; }
+.hw-tag-price      { background-color: #fff3cd; color: #6b4e00; border: 1px solid #f1d98a; }
+
+/* Role ratings: Recommended = text-bg-success (green), Not compatible = text-bg-danger (red) */
+.hw-role .hw-rating-works           { background-color: #f66f00; color: #212529; }
+.hw-role .hw-rating-not-recommended { background-color: #ffce2b; color: #212529; }

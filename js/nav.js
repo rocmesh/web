@@ -53,11 +53,14 @@
               aria-expanded="false" aria-label="Show hardware pages"></a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="${root}hardware/repeater.html">Basic Repeater</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/esp32v3.html">Heltec ESP32V3</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/esp32v3.html">Heltec ESP32 V3</a></li>
               <li><a class="dropdown-item" href="${root}hardware/t114.html">Heltec T114</a></li>
               <li><a class="dropdown-item" href="${root}hardware/x1.html">Seeed SenseCAP MeshTracker X1</a></li>
               <li><a class="dropdown-item" href="${root}hardware/t1000e.html">Seeed SenseCAP Card Tracker T1000-E</a></li>
               <li><a class="dropdown-item" href="${root}hardware/xiao.html">Seeed XIAO ESP32S3 & Wio-SX1262</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/esp32v4.html">Heltec ESP32 V4</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/rak1w.html">RAK3401 & RAK13302 1W Repeater</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/lorawan32expansion.html">Heltec WiFi LoRa 32 Expansion Kit</a></li>
             </ul>
           </li>
           <li class="nav-item">
