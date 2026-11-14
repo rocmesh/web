@@ -61,6 +61,7 @@
               <li><a class="dropdown-item" href="${root}hardware/esp32v4.html">Heltec ESP32 V4</a></li>
               <li><a class="dropdown-item" href="${root}hardware/rak1w.html">RAK3401 & RAK13302 1W Repeater</a></li>
               <li><a class="dropdown-item" href="${root}hardware/lorawan32expansion.html">Heltec WiFi LoRa 32 Expansion Kit</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/peakmesh.html">PeakMesh Magnet Mover</a></li>
             </ul>
           </li>
           <li class="nav-item">
