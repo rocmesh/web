@@ -65,3 +65,43 @@
 /* Role ratings: Recommended = text-bg-success (green), Not compatible = text-bg-danger (red) */
 .hw-role .hw-rating-works           { background-color: #f66f00; color: #212529; }
 .hw-role .hw-rating-not-recommended { background-color: #ffce2b; color: #212529; }
+
+/* Click-to-enlarge photo viewer (js/hardware.js) */
+.hw-zoomable { cursor: zoom-in; }
+.hw-zoomable:focus-visible { outline: 3px solid #67EA94; outline-offset: 3px; }
+.hw-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(10, 13, 22, .92);
+  cursor: zoom-out;
+}
+.hw-lightbox[hidden] { display: none; }
+.hw-lightbox-figure { margin: 0; text-align: center; }
+.hw-lightbox-figure img {
+  max-width: 100%;
+  max-height: calc(100vh - 6rem);
+  border-radius: .5rem;
+  cursor: default;
+}
+.hw-lightbox-figure figcaption { color: #e9ecef; margin-top: .75rem; font-size: .95rem; }
+.hw-lightbox-close {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .15);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.hw-lightbox-close:hover,
+.hw-lightbox-close:focus-visible { background: rgba(255, 255, 255, .3); outline: none; }

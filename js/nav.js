@@ -54,6 +54,9 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="${root}hardware/repeater.html">Basic Repeater</a></li>
               <li><a class="dropdown-item" href="${root}hardware/esp32v3.html">Heltec ESP32 V3</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/esp32v3handheld.html">Heltec V3 Handheld</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/esp32v3solar.html">Heltec V3 Solar Repeater</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/icepeter.html">Icepeter</a></li>
               <li><a class="dropdown-item" href="${root}hardware/t114.html">Heltec T114</a></li>
               <li><a class="dropdown-item" href="${root}hardware/x1.html">Seeed SenseCAP MeshTracker X1</a></li>
               <li><a class="dropdown-item" href="${root}hardware/t1000e.html">Seeed SenseCAP Card Tracker T1000-E</a></li>
@@ -62,6 +65,11 @@
               <li><a class="dropdown-item" href="${root}hardware/rak1w.html">RAK3401 & RAK13302 1W Repeater</a></li>
               <li><a class="dropdown-item" href="${root}hardware/lorawan32expansion.html">Heltec WiFi LoRa 32 Expansion Kit</a></li>
               <li><a class="dropdown-item" href="${root}hardware/peakmesh.html">PeakMesh Magnet Mover</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/polepeater.html">Seeed XIAO Polepeater Build</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/cardputer.html">M5Stack Cardputer ADV</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/wismeshpocket.html">RAK WisMesh Pocket V2</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/cheapnode.html">Budget Heltec V3 Node</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/tdeck.html">LilyGO T-Deck Plus</a></li>
             </ul>
           </li>
           <li class="nav-item">

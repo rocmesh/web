@@ -1,0 +1,235 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="M5Stack Cardputer ADV: what it is, its role in the mesh, where to buy it, and how to run Plai, Meshtastic and MeshCore on it.">
+  <title>ROCMesh - M5Stack Cardputer ADV</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/hardware.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main class="hw-page">
+    <div class="container py-vh-4">
+
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-4 fw-bold">M5Stack Cardputer ADV</h1>
+          <p class="lead">
+            A pocket computer with a real keyboard and screen. Running Plai, it's a standalone Meshtastic messenger
+            that doesn't need a phone.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill hw-tag hw-tag-meshcore">MeshCore</span>
+            <span class="badge rounded-pill hw-tag hw-tag-meshtastic">Meshtastic</span>
+            <span class="badge rounded-pill hw-tag hw-tag-role">Standalone</span>
+            <span class="badge rounded-pill hw-tag hw-tag-feature">Keyboard</span>
+            <span class="badge rounded-pill hw-tag hw-tag-feature">GPS</span>
+            <span class="badge rounded-pill hw-tag hw-tag-price">~$48-65</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <img class="hw-hero-img" src="../img/hardware/cardputer_opened-web.jpg" style="--focus: 50% 70%"
+            alt="An M5Stack Cardputer ADV with the LoRa and GPS cap and a whip antenna, next to its 3D-printed cover">
+        </div>
+      </div>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          The Cardputer ADV is a credit-card-sized ESP32-S3 computer from M5Stack, with a 56-key keyboard, a small color
+          screen and a built-in battery. M5Stack's Cardputer Mesh Kit adds a snap-on Cap LoRa-1262, which gives it a
+          Semtech SX1262 LoRa radio and a GPS, and ships with Meshtastic installed.
+        </p>
+        <p>
+          Ours runs <a href="https://github.com/d4rkmen/plai" target="_blank" rel="noopener">Plai</a>, a community-made,
+          standalone Meshtastic messenger. You read and type messages right on the device, with no phone or app needed, and
+          your messages and contacts are saved to the microSD card. Thanks to
+          <a href="https://github.com/bmorcelli/Launcher" target="_blank" rel="noopener">Launcher</a> (formerly M5Launcher),
+          you can keep Meshtastic and MeshCore on the same SD card and switch between them.
+        </p>
+
+        <table class="table hw-facts border mt-4 mb-0">
+          <tbody>
+            <tr><th scope="row">Processor</th><td>ESP32-S3 on M5Stack's Stamp-S3A (Wi-Fi and Bluetooth LE)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa on the Cap LoRa-1262, up to 22 dBm, 868-923 MHz (covers US 915 MHz)</td></tr>
+            <tr><th scope="row">Screen</th><td>1.14" color screen, 240 x 135</td></tr>
+            <tr><th scope="row">Keyboard</th><td>56 keys</td></tr>
+            <tr><th scope="row">GPS</th><td>Built into the LoRa cap (GPS, Galileo, GLONASS and BeiDou)</td></tr>
+            <tr><th scope="row">Antenna</th><td>External whip antenna on the LoRa cap</td></tr>
+            <tr><th scope="row">Battery</th><td>1500 mAh (1750 mAh on early units), charges over USB-C</td></tr>
+            <tr><th scope="row">Storage</th><td>microSD card slot</td></tr>
+            <tr><th scope="row">Size and weight</th><td>84 x 54 x 19.6 mm, 81 g without the cap</td></tr>
+            <tr><th scope="row">Documentation</th><td><a href="https://docs.m5stack.com/en/core/Cardputer-Adv" target="_blank" rel="noopener">M5Stack docs</a>,
+              <a href="https://meshtastic.org/docs/hardware/devices/m5stack/cardputer/" target="_blank" rel="noopener">Meshtastic docs</a></td></tr>
+            <tr><th scope="row">Firmware</th><td>Plai, Meshtastic, MeshCore</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Role in the mesh</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Standalone messenger</h3>
+              <p class="mb-0">
+                What it does best. With a keyboard and screen built in, you can read and send messages without
+                a phone. That's great when your phone is dead, or if you'd rather keep it in your pocket.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-works mb-2">Works</span>
+              <h3>Phone companion</h3>
+              <p class="mb-0">
+                With the stock Meshtastic or MeshCore firmware, it pairs with your phone like any other node.
+                You'd be carrying a keyboard you don't need, though. For a smaller companion, see the <a href="t1000e.html">T1000-E</a>.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-not-recommended mb-2">Not recommended</span>
+              <h3>Repeater</h3>
+              <p class="mb-0">
+                It can relay, but the small battery and power-hungry ESP32 won't last, and the keyboard and screen go to waste.
+                For a fixed site, use the <a href="rak1w.html">RAK 1W Repeater</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Where to buy and what it costs</h2>
+        <p>
+          Buy the <b>Cardputer Mesh Kit</b>, which includes the Cardputer ADV and the Cap LoRa-1262. The Cardputer on its own
+          has no LoRa radio. You'll also need a microSD card for Plai and Launcher.
+        </p>
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr><th>Seller</th><th>Notes</th><th class="text-end">Approx. price</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://msh.to/m5stack-cardputer-adv/" target="_blank" rel="noopener">M5Stack (official)</a></td>
+                <td>Cardputer Mesh Kit: Cardputer ADV with the Cap LoRa-1262</td>
+                <td class="text-end text-nowrap">$48</td>
+              </tr>
+              <tr>
+                <td><a href="https://openelab.com/products/m5stack-cardputer-mesh-kit" target="_blank" rel="noopener">OpenELAB</a></td>
+                <td>Reseller</td>
+                <td class="text-end text-nowrap">$65</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small text-secondary">Prices last checked November 2026.</p>
+      </section>
+
+      <section>
+        <h2>Photos</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/cardputer_opened-web.jpg" style="--focus: 50% 80%"
+                alt="The Cardputer ADV with its LoRa cap and antenna, next to its 3D-printed cover">
+              <figcaption>With the cover off</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/cardputer_closed-web.jpg" style="--focus: 50% 90%"
+                alt="The Cardputer ADV in its 3D-printed cover, with the LoRa cap and antenna on top">
+              <figcaption>In its 3D-printed cover</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="setup">
+        <h2>Setup</h2>
+        <p>
+          The Mesh Kit ships with Meshtastic installed and works out of the box. To run Plai, or to switch between
+          Meshtastic and MeshCore, set up Launcher first:
+        </p>
+        <ol>
+          <li>Flash Launcher to the Cardputer with the <a href="https://bmorcelli.github.io/Launcher/" target="_blank" rel="noopener">Launcher web flasher</a>
+            (Chrome or Edge, plugged in over USB-C).</li>
+          <li>Format a microSD card as FAT32 (32 GB or smaller is safest) and copy on the firmware files you want:
+            <a href="https://github.com/d4rkmen/plai" target="_blank" rel="noopener">Plai</a>, Meshtastic and MeshCore.</li>
+          <li>Put the card in the Cardputer and turn it on. Launcher lets you pick a firmware from the SD card and install it.
+            After that, the Cardputer starts straight into that firmware unless you press a key during startup to get back to Launcher.</li>
+          <li>Follow our recommended settings for whichever firmware you're running.</li>
+        </ol>
+        <ul>
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
+            then see <a href="../meshcore/companion-settings.html">MeshCore companion settings</a>.</li>
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
+            then see <a href="../meshtastic/companion-settings.html">Meshtastic companion settings</a>.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/hardware.js"></script>
+
+</body>
+
+</html>
