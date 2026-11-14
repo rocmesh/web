@@ -1,0 +1,270 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="RAK3401 &amp; RAK13302 1W Repeater: what it is, its role in the mesh, where to buy it, and how to build one.">
+  <title>ROCMesh - RAK3401 &amp; RAK13302 1W Repeater</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/hardware.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main class="hw-page">
+    <div class="container py-vh-4">
+
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-4 fw-bold">RAK3401 &amp; RAK13302 1W Repeater</h1>
+          <p class="lead">
+            A full 1-watt repeater built from RAKwireless parts, a big battery and a weatherproof project box,
+            for serious range at a hobbyist price.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill hw-tag hw-tag-meshcore">MeshCore</span>
+            <span class="badge rounded-pill hw-tag hw-tag-meshtastic">Meshtastic</span>
+            <span class="badge rounded-pill hw-tag hw-tag-role">Repeater</span>
+            <span class="badge rounded-pill hw-tag hw-tag-high-power">High power</span>
+            <span class="badge rounded-pill hw-tag hw-tag-price">~$49 + battery</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <img class="hw-hero-img" src="../img/hardware/rak1w-web.jpg"
+            alt="The 1W repeater build open, with the 6000 mAh battery in the lid and the RAK boards mounted in the box">
+        </div>
+      </div>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          This build is based on RAKwireless's WisMesh 1W Booster Starter Kit. A RAK3401 core module (Nordic's
+          low-power nRF52840 chip) and a RAK13302 radio module screw onto a RAK19007 base board. The RAK13302 pairs a
+          Semtech SX1262 LoRa radio with a signal booster that transmits at up to 1 watt (30 dBm), several times the
+          power of a typical handheld node.
+        </p>
+        <p>
+          The nRF52840 uses very little power while listening, so the node runs for a long time between charges
+          on a 6000 mAh battery. Everything goes in a weatherproof project box, using the antennas that come with the kit.
+        </p>
+
+        <table class="table hw-facts border mt-4 mb-0">
+          <tbody>
+            <tr><th scope="row">Processor</th><td>Nordic nRF52840 on the RAK3401 (Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa with SKY66122 booster on the RAK13302, up to 30 dBm (1 W), 902-928 MHz (US)</td></tr>
+            <tr><th scope="row">Screen</th><td>None (configured from the app)</td></tr>
+            <tr><th scope="row">GPS</th><td>None</td></tr>
+            <tr><th scope="row">Antenna</th><td>Stock kit antennas: LoRa on the RAK13302's IPEX (u.FL) connector, Bluetooth on the RAK3401</td></tr>
+            <tr><th scope="row">Power</th><td>3.7 V LiPo battery, USB-C, or a 5 V solar panel through the base board</td></tr>
+            <tr><th scope="row">Weatherproofing</th><td>From the project box</td></tr>
+            <tr><th scope="row">Documentation</th><td><a href="https://docs.rakwireless.com/product-categories/meshtastic/wismesh-starter-kit-rak3401/overview/" target="_blank" rel="noopener">RAKwireless docs</a></td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Role in the mesh</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Repeater</h3>
+              <p class="mb-0">
+                What it's built for. Mount it high up, such as in an attic, on a mast or on a roofline,
+                and the 1 W radio will relay traffic across a much wider area than a standard node.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-works mb-2">Works</span>
+              <h3>Home base companion</h3>
+              <p class="mb-0">
+                It works as a companion, but it's overkill. Your phone only reaches it over Bluetooth,
+                so the extra range mostly helps other people. For a home node, see the <a href="esp32v4.html">Heltec V4</a>.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-not-recommended mb-2">Not recommended</span>
+              <h3>Pocket companion</h3>
+              <p class="mb-0">
+                It works, but the project box and 6000 mAh battery make it far too bulky to carry.
+                Get a <a href="t114.html">Heltec T114</a> or <a href="t1000e.html">T1000-E</a> instead.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Where to buy and what it costs</h2>
+        <p>
+          Buy the <b>915 MHz</b> (US) version of the kit. RAK also sells an 868 MHz kit for Europe.
+          If you buy the parts separately, make sure the RAK13302 is the <b>battery-powered</b> version,
+          because the other version only runs from an external 5 V supply.
+        </p>
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr><th>Seller</th><th>Notes</th><th class="text-end">Approx. price</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://store.rakwireless.com/products/wismesh-1w-booster-starter-kit" target="_blank" rel="noopener">RAKwireless (official)</a></td>
+                <td>WisMesh 1W Booster Starter Kit: core, 1 W module, base board and antennas. Plus shipping</td>
+                <td class="text-end text-nowrap">$39</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small text-secondary">Prices last checked November 2026.</p>
+      </section>
+
+      <section>
+        <h2>The build</h2>
+        <p>
+          Our 1 W repeater: the RAK starter kit and a MakerFocus 6000 mAh LiPo, sealed in a project box
+          with the kit's stock antennas inside. There's no soldering, just screws and plugs.
+        </p>
+
+        <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
+        <div class="table-responsive">
+          <table class="table hw-bom">
+            <thead>
+              <tr><th>Part</th><th>Qty</th><th>Notes</th><th class="hw-cost">Approx. cost</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://store.rakwireless.com/products/wismesh-1w-booster-starter-kit" target="_blank" rel="noopener">RAK WisMesh 1W Booster Starter Kit (RAK3401 + RAK13302), 915 MHz</a></td>
+                <td>1</td>
+                <td>Includes base board and stock LoRa and Bluetooth antennas. Plus shipping</td>
+                <td class="hw-cost">$39</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.amazon.com/s?k=MakerFocus+3.7V+6000mAh+LiPo" target="_blank" rel="noopener">MakerFocus 3.7 V 6000 mAh LiPo</a></td>
+                <td>1</td>
+                <td>Check that the plug and polarity match the base board</td>
+                <td class="hw-cost">$0</td>
+              </tr>
+              <tr>
+                <td><a href="https://a.co/d/09FJg4cb" target="_blank" rel="noopener">Junction / project box</a></td>
+                <td>1</td>
+                <td>Holds the boards and battery</td>
+                <td class="hw-cost">$10</td>
+              </tr>
+              <tr class="fw-bold">
+                <td colspan="3">Total</td>
+                <td class="hw-cost">$49 + battery</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="h5 fw-bold mt-4">Assembly notes</h3>
+        <ol>
+          <li>Flash the firmware first (see <a href="#setup">Setup</a> below).</li>
+          <li>Screw the RAK3401 core and the RAK13302 module onto the RAK19007 base board. RAK says to use the screws,
+            not just the connectors, so the modules stay seated.</li>
+          <li>Connect the LoRa antenna to the IPEX connector <b>on the RAK13302</b> and the Bluetooth antenna to the RAK3401.
+            <b>Never power the radio without an antenna attached.</b> At 1 W, this can damage the module.</li>
+          <li>Check the battery's polarity against the base board's battery connector, then plug it in.</li>
+          <li>Mount the boards and battery in the box and close the lid.</li>
+        </ol>
+
+        <h3 class="h5 fw-bold mt-4">Photos</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/rak1w-web.jpg" alt="The finished build open, showing the battery and boards">
+              <figcaption>Inside the box</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <div class="hw-photo-empty">Photo coming soon</div>
+              <figcaption>Sealed up</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <div class="hw-photo-empty">Photo coming soon</div>
+              <figcaption>Installed</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="setup">
+        <h2>Setup</h2>
+        <p>
+          The kit ships with Meshtastic installed. To change firmware, plug the RAK3401 in over USB-C and use a web flasher
+          (Chrome or Edge). Always choose the <b>RAK3401 1-watt</b> firmware, not the standard RAK firmware, so the booster
+          works properly. Then follow our recommended repeater settings.
+        </p>
+        <ul>
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
+            then see <a href="../meshcore/repeater-settings.html">MeshCore repeater settings</a>.</li>
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
+            then see <a href="../meshtastic/infrastructure-settings.html">Meshtastic infrastructure settings</a>.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Heltec WiFi LoRa 32 Expansion Kit: what it is, its role in the mesh, and where to buy it.">
+  <title>ROCMesh - Heltec WiFi LoRa 32 Expansion Kit</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/hardware.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main class="hw-page">
+    <div class="container py-vh-4">
+
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-4 fw-bold">Heltec WiFi LoRa 32 Expansion Kit</h1>
+          <p class="lead">
+            A ready-made handheld built around the <a href="esp32v4.html">Heltec V4</a>, with a big screen, a metal case,
+            a full-size antenna and room for an 18650 battery. No assembly needed.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill hw-tag hw-tag-meshcore">MeshCore</span>
+            <span class="badge rounded-pill hw-tag hw-tag-meshtastic">Meshtastic</span>
+            <span class="badge rounded-pill hw-tag hw-tag-role">Companion</span>
+            <span class="badge rounded-pill hw-tag hw-tag-high-power">High power</span>
+            <span class="badge rounded-pill hw-tag hw-tag-price">~$50-59</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <img class="hw-hero-img" src="../img/hardware/lorawan32expansion-web.jpg"
+            alt="The Heltec WiFi LoRa 32 Expansion Kit with its screen and a whip antenna attached">
+        </div>
+      </div>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          The Expansion Kit is Heltec's finished handheld version of the <a href="esp32v4.html">WiFi LoRa 32 V4</a>.
+          The V4 board comes pre-installed on an expansion board inside an aluminum and polycarbonate case,
+          with a 320 x 240 color screen on the front. It keeps the V4's strengths: an ESP32-S3 chip with Wi-Fi and
+          Bluetooth, and a Semtech SX1262 radio with up to 28 dBm of transmit power.
+        </p>
+        <p>
+          There's nothing to build. It comes with a LoRa antenna on an SMA connector, and you can order it with
+          a 2800 mAh 18650 battery, a GPS module and a touch screen. The case isn't waterproof, so keep it out of the rain.
+        </p>
+
+        <table class="table hw-facts border mt-4 mb-0">
+          <tbody>
+            <tr><th scope="row">Processor</th><td>ESP32-S3 on a Heltec V4 board (Wi-Fi and Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa, 21 or 28 dBm version, 863-928 MHz (covers US 915 MHz)</td></tr>
+            <tr><th scope="row">Screen</th><td>320 x 240 color screen, behind tempered glass or as a touch screen</td></tr>
+            <tr><th scope="row">GPS</th><td>Optional Quectel L76K module, with its own antenna</td></tr>
+            <tr><th scope="row">Sensors</th><td>Accelerometer</td></tr>
+            <tr><th scope="row">Antenna</th><td>External, on an SMA connector. A LoRa antenna is included</td></tr>
+            <tr><th scope="row">Battery</th><td>Holds one 18650 battery. A 2800 mAh battery is optional; any 3.3-4.2 V 18650 works</td></tr>
+            <tr><th scope="row">Weatherproofing</th><td>None</td></tr>
+            <tr><th scope="row">Documentation</th><td><a href="https://wiki.heltec.org/docs/devices/open-source-hardware/esp32-series/lora-32/wifi-lora-32-expansion-kit/" target="_blank" rel="noopener">Heltec wiki</a></td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Role in the mesh</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Handheld companion</h3>
+              <p class="mb-0">
+                What it's built for. The big screen lets you read messages without your phone, the 18650 battery
+                gives it real staying power, and the full-size antenna and high-power radio reach further than pocket trackers.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Home base companion</h3>
+              <p class="mb-0">
+                Leave it plugged into USB on a desk or shelf. The screen shows new messages at a glance,
+                and Wi-Fi lets you connect from your computer.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-not-recommended mb-2">Not recommended</span>
+              <h3>Repeater</h3>
+              <p class="mb-0">
+                It works as a repeater, but the case isn't waterproof and you'd be paying for a screen nobody will look at.
+                For a fixed site, the <a href="repeater.html">Basic Repeater</a> or <a href="rak1w.html">RAK 1W Repeater</a> is a better fit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Where to buy and what it costs</h2>
+        <p>
+          Choose the <b>863-928 MHz</b> band, which covers the US 915 MHz band, and the <b>28 dBm</b> version for the best range.
+          The GPS module, touch screen and battery each add to the price. Ordering the battery also raises shipping costs,
+          so it's often cheaper to buy an 18650 locally.
+        </p>
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr><th>Seller</th><th>Notes</th><th class="text-end">Approx. price</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://heltec.org/project/wifi-lora-32-v4-expansion-housing/" target="_blank" rel="noopener">Heltec (official)</a></td>
+                <td>Official store. Price depends on the options you choose</td>
+                <td class="text-end text-nowrap">$50-59</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small text-secondary">Prices last checked November 2026.</p>
+      </section>
+
+      <section id="setup">
+        <h2>Setup</h2>
+        <p>
+          Flash the firmware from a web browser (Chrome or Edge) with the kit plugged in over USB-C,
+          then follow our recommended settings. The kit uses the standard V4 board, not the V4-R8, so pick the matching V4 entry in the flasher.
+          If the flasher can't find it, hold the USER button, press RST once, then let go of USER and try again.
+        </p>
+        <ul>
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>.
+            Choose <b>Heltec v4 + Expansion Kit (Touch)</b>. The screen works, but touch input isn't supported yet.
+            Then see <a href="../meshcore/companion-settings.html">MeshCore companion settings</a>.</li>
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>.
+            Use version 2.7.20 or newer, and turn on the Meshtastic UI option if you have the touch screen.
+            Then see <a href="../meshtastic/companion-settings.html">Meshtastic companion settings</a>.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
