@@ -9,6 +9,7 @@
     @media (min-width: 992px) and (hover: hover) {
       #navScroll .dropdown:hover > .dropdown-menu { display: block; margin-top: 0; }
     }
+    #navScroll .dropdown-menu { max-height: calc(100vh - 6rem); overflow-y: auto; }
   </style>
   <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
     <div class="container">
@@ -52,24 +53,31 @@
               class="nav-link dropdown-toggle d-inline-block ps-0" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false" aria-label="Show hardware pages"></a>
             <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Repeaters</h6></li>
               <li><a class="dropdown-item" href="${root}hardware/repeater.html">Basic Repeater</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/rak1w.html">RAK3401 & RAK13302 1W Repeater</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/peakmesh.html">PeakMesh Magnet Mover</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/esp32v3solar.html">Heltec V3 Solar Repeater</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/polepeater.html">Seeed XIAO Polepeater Build</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/icepeter.html">Icepeter</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header">Ready-made handhelds</h6></li>
+              <li><a class="dropdown-item" href="${root}hardware/wismeshpocket.html">RAK WisMesh Pocket V2</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/t1000e.html">Seeed SenseCAP Card Tracker T1000-E</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/x1.html">Seeed SenseCAP MeshTracker X1</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/lorawan32expansion.html">Heltec WiFi LoRa 32 Expansion Kit</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header">Keyboard devices</h6></li>
+              <li><a class="dropdown-item" href="${root}hardware/tdeck.html">LilyGO T-Deck Plus</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/cardputer.html">M5Stack Cardputer ADV</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header">Boards and DIY builds</h6></li>
+              <li><a class="dropdown-item" href="${root}hardware/t114.html">Heltec T114</a></li>
               <li><a class="dropdown-item" href="${root}hardware/esp32v3.html">Heltec ESP32 V3</a></li>
               <li><a class="dropdown-item" href="${root}hardware/esp32v3handheld.html">Heltec V3 Handheld</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/esp32v3solar.html">Heltec V3 Solar Repeater</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/icepeter.html">Icepeter</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/t114.html">Heltec T114</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/x1.html">Seeed SenseCAP MeshTracker X1</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/t1000e.html">Seeed SenseCAP Card Tracker T1000-E</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/xiao.html">Seeed XIAO ESP32S3 & Wio-SX1262</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/esp32v4.html">Heltec ESP32 V4</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/rak1w.html">RAK3401 & RAK13302 1W Repeater</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/lorawan32expansion.html">Heltec WiFi LoRa 32 Expansion Kit</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/peakmesh.html">PeakMesh Magnet Mover</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/polepeater.html">Seeed XIAO Polepeater Build</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/cardputer.html">M5Stack Cardputer ADV</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/wismeshpocket.html">RAK WisMesh Pocket V2</a></li>
               <li><a class="dropdown-item" href="${root}hardware/cheapnode.html">Budget Heltec V3 Node</a></li>
-              <li><a class="dropdown-item" href="${root}hardware/tdeck.html">LilyGO T-Deck Plus</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/esp32v4.html">Heltec ESP32 V4</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/xiao.html">Seeed XIAO ESP32S3 & Wio-SX1262</a></li>
             </ul>
           </li>
           <li class="nav-item">

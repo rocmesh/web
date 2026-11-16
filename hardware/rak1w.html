@@ -25,7 +25,7 @@
         <div class="col-12 col-lg-6">
           <h1 class="display-4 fw-bold">RAK3401 &amp; RAK13302 1W Repeater</h1>
           <p class="lead">
-            A full 1-watt repeater built from RAKwireless parts, a big battery and a weatherproof project box,
+            A high-power repeater built from RAKwireless parts, a big battery and a weatherproof project box,
             for serious range at a hobbyist price.
           </p>
 
@@ -48,8 +48,8 @@
         <p>
           This build is based on RAKwireless's WisMesh 1W Booster Starter Kit. A RAK3401 core module (Nordic's
           low-power nRF52840 chip) and a RAK13302 radio module screw onto a RAK19007 base board. The RAK13302 pairs a
-          Semtech SX1262 LoRa radio with a signal booster that transmits at up to 1 watt (30 dBm), several times the
-          power of a typical handheld node.
+          Semtech SX1262 LoRa radio with a signal booster. RAK sells it as a 1 W booster, but in the US it's
+          FCC-certified for up to 290 mW (about 24.6 dBm). That's still more power than a typical handheld node.
         </p>
         <p>
           The nRF52840 uses very little power while listening, so the node runs for a long time between charges
@@ -59,7 +59,7 @@
         <table class="table hw-facts border mt-4 mb-0">
           <tbody>
             <tr><th scope="row">Processor</th><td>Nordic nRF52840 on the RAK3401 (Bluetooth LE 5.0)</td></tr>
-            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa with SKY66122 booster on the RAK13302, up to 30 dBm (1 W), 902-928 MHz (US)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa with SKY66122 booster on the RAK13302, FCC-certified in the US for up to 290 mW (about 24.6 dBm), 902-928 MHz</td></tr>
             <tr><th scope="row">Screen</th><td>None (configured from the app)</td></tr>
             <tr><th scope="row">GPS</th><td>None</td></tr>
             <tr><th scope="row">Antenna</th><td>Stock kit antennas: LoRa on the RAK13302's IPEX (u.FL) connector, Bluetooth on the RAK3401</td></tr>
@@ -80,7 +80,7 @@
               <h3>Repeater</h3>
               <p class="mb-0">
                 What it's built for. Mount it high up, such as in an attic, on a mast or on a roofline,
-                and the 1 W radio will relay traffic across a much wider area than a standard node.
+                and the high-power radio will relay traffic across a wider area than a standard node.
               </p>
             </div>
           </div>
@@ -122,7 +122,7 @@
             <tbody>
               <tr>
                 <td><a href="https://store.rakwireless.com/products/wismesh-1w-booster-starter-kit" target="_blank" rel="noopener">RAKwireless (official)</a></td>
-                <td>WisMesh 1W Booster Starter Kit: core, 1 W module, base board and antennas. Plus shipping</td>
+                <td>WisMesh 1W Booster Starter Kit: core, booster module, base board and antennas. Plus shipping</td>
                 <td class="text-end text-nowrap">$39</td>
               </tr>
             </tbody>
@@ -134,7 +134,7 @@
       <section>
         <h2>The build</h2>
         <p>
-          Our 1 W repeater: the RAK starter kit and a MakerFocus 6000 mAh LiPo, sealed in a project box
+          Our high-power repeater: the RAK starter kit and a MakerFocus 6000 mAh LiPo, sealed in a project box
           with the kit's stock antennas inside. There's no soldering, just screws and plugs.
         </p>
 
@@ -155,7 +155,7 @@
                 <td><a href="https://www.amazon.com/s?k=MakerFocus+3.7V+6000mAh+LiPo" target="_blank" rel="noopener">MakerFocus 3.7 V 6000 mAh LiPo</a></td>
                 <td>1</td>
                 <td>Check that the plug and polarity match the base board</td>
-                <td class="hw-cost">$0</td>
+                <td class="hw-cost">Varies</td>
               </tr>
               <tr>
                 <td><a href="https://a.co/d/09FJg4cb" target="_blank" rel="noopener">Junction / project box</a></td>
@@ -177,7 +177,7 @@
           <li>Screw the RAK3401 core and the RAK13302 module onto the RAK19007 base board. RAK says to use the screws,
             not just the connectors, so the modules stay seated.</li>
           <li>Connect the LoRa antenna to the IPEX connector <b>on the RAK13302</b> and the Bluetooth antenna to the RAK3401.
-            <b>Never power the radio without an antenna attached.</b> At 1 W, this can damage the module.</li>
+            <b>Never power the radio without an antenna attached.</b> With the booster, this can damage the module.</li>
           <li>Check the battery's polarity against the base board's battery connector, then plug it in.</li>
           <li>Mount the boards and battery in the box and close the lid.</li>
         </ol>
@@ -188,18 +188,6 @@
             <figure class="hw-photo">
               <img src="../img/hardware/rak1w-web.jpg" alt="The finished build open, showing the battery and boards">
               <figcaption>Inside the box</figcaption>
-            </figure>
-          </div>
-          <div class="col">
-            <figure class="hw-photo">
-              <div class="hw-photo-empty">Photo coming soon</div>
-              <figcaption>Sealed up</figcaption>
-            </figure>
-          </div>
-          <div class="col">
-            <figure class="hw-photo">
-              <div class="hw-photo-empty">Photo coming soon</div>
-              <figcaption>Installed</figcaption>
             </figure>
           </div>
         </div>

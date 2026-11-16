@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="Heltec ESP32V4: what it is, its role in the mesh, where to buy it, and how to build one.">
-  <title>ROCMesh - Heltec ESP32V4</title>
+  <meta name="description" content="Heltec ESP32 V4: what it is, its role in the mesh, where to buy it, and accessories.">
+  <title>ROCMesh - Heltec ESP32 V4</title>
   <link rel="stylesheet" href="../css/theme.min.css">
   <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/hardware.css">
@@ -23,7 +23,7 @@
 
       <div class="row align-items-center g-5 mt-0">
         <div class="col-12 col-lg-6">
-          <h1 class="display-4 fw-bold">Heltec ESP32V4</h1>
+          <h1 class="display-4 fw-bold">Heltec ESP32 V4</h1>
           <p class="lead">
             The Heltec V3's successor, with a much stronger radio, solar input and a GPS connector,
             for about the same price.
@@ -39,7 +39,7 @@
         </div>
         <div class="col-12 col-lg-6">
           <img class="hw-hero-img" src="../img/hardware/esp32v4-web.jpg"
-            alt="A bare Heltec ESP32V4 board with its screen and included LoRa antenna">
+            alt="A bare Heltec ESP32 V4 board with its screen and included LoRa antenna">
         </div>
       </div>
 
@@ -134,79 +134,31 @@
       </section>
 
       <section>
-        <h2>The build</h2>
+        <h2>Accessories</h2>
         <p>
-          Describe the build and what it's made of.
+          Optional extras for your Heltec V4. If you'd rather not build a case at all, the
+          <a href="lorawan32expansion.html">Heltec WiFi LoRa 32 Expansion Kit</a> is a finished handheld built around the V4.
         </p>
-
-        <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
         <div class="table-responsive">
-          <table class="table hw-bom">
+          <table class="table align-middle">
             <thead>
-              <tr><th>Part</th><th>Qty</th><th>Notes</th><th class="hw-cost">Approx. cost</th></tr>
+              <tr><th>Item</th><th>Seller</th><th class="text-end">Approx. price</th></tr>
             </thead>
             <tbody>
               <tr>
-                <td><a href="https://heltec.org/project/wifi-lora-32-v4/" target="_blank" rel="noopener">Heltec WiFi LoRa 32 V4, 902-928 MHz</a></td>
-                <td>1</td>
-                <td>Includes a basic LoRa antenna</td>
-                <td class="hw-cost">$20</td>
-              </tr>
-              <tr>
                 <td><a href="https://heltec.org/project/l76-gnss-module/" target="_blank" rel="noopener">Heltec L76K GPS module</a></td>
-                <td>1</td>
-                <td>Optional. Plugs into the GPS port</td>
-                <td class="hw-cost">$8</td>
-              </tr>
-              <tr>
-                <td><a href="#" target="_blank" rel="noopener">Part</a></td>
-                <td>1</td>
-                <td>Notes</td>
-                <td class="hw-cost">$0</td>
-              </tr>
-              <tr class="fw-bold">
-                <td colspan="3">Total</td>
-                <td class="hw-cost">$0</td>
+                <td>Heltec (official). Plugs into the V4's GPS port</td>
+                <td class="text-end text-nowrap">$8</td>
               </tr>
             </tbody>
           </table>
-        </div>
-
-        <h3 class="h5 fw-bold mt-4">Assembly notes</h3>
-        <ol>
-          <li>Flash the firmware before putting it in the case (see <a href="#setup">Setup</a> below).</li>
-          <li>Connect the antenna to the IPEX connector. Press straight down until it clicks.
-            <b>Never power the radio without an antenna attached.</b></li>
-          <li>Step three.</li>
-        </ol>
-
-        <h3 class="h5 fw-bold mt-4">Photos</h3>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <figure class="hw-photo">
-              <img src="../img/hardware/esp32v4-web.jpg" alt="A bare Heltec ESP32V4 board with its included antenna">
-              <figcaption>Out of the box</figcaption>
-            </figure>
-          </div>
-          <div class="col">
-            <figure class="hw-photo">
-              <div class="hw-photo-empty">Photo coming soon</div>
-              <figcaption>Caption</figcaption>
-            </figure>
-          </div>
-          <div class="col">
-            <figure class="hw-photo">
-              <div class="hw-photo-empty">Photo coming soon</div>
-              <figcaption>Caption</figcaption>
-            </figure>
-          </div>
         </div>
       </section>
 
       <section id="setup">
         <h2>Setup</h2>
         <p>
-          Flash the firmware from a web browser (Chrome or Edge) with the Heltec V4 plugged in over USB-C,
+          <b>Attach the antenna before you power it on.</b> Then flash the firmware from a web browser (Chrome or Edge) with the Heltec V4 plugged in over USB-C,
           then follow our recommended settings. In the flasher, pick <b>Heltec V4</b> or <b>Heltec V4-R8</b> to match
           the board you bought. Flashing the wrong one won't work. If the flasher can't find the board, hold the
           PRG button, press RST once, then let go of PRG and try again.
