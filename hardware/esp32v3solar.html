@@ -34,7 +34,7 @@
             <span class="badge rounded-pill hw-tag hw-tag-meshtastic">Meshtastic</span>
             <span class="badge rounded-pill hw-tag hw-tag-role">Repeater</span>
             <span class="badge rounded-pill hw-tag hw-tag-feature">Solar</span>
-            <span class="badge rounded-pill hw-tag hw-tag-price">~$Price</span>
+            <span class="badge rounded-pill hw-tag hw-tag-price">~$57 + V3</span>
           </div>
         </div>
         <div class="col-12 col-lg-6">
@@ -118,9 +118,10 @@
       <section>
         <h2>The build</h2>
         <p>
-          The V3, the battery holder and a small solar charge board sit in the bottom of the box, with the panels in the lid
-          and the antenna mounted through the side. The charge board sits between the panels and the batteries so they
-          can't be overcharged.
+          The V3 and the battery holder sit in the bottom of the box, with the panels in the lid and the antenna mounted
+          through the side. We recommend adding a small solar charge controller between the panels and the batteries.
+          It stops the batteries overcharging on sunny days, and it costs a few dollars. A CN3791 solar charge module works
+          well for small panels like these. Pick the version that matches your panels' voltage.
         </p>
 
         <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
@@ -134,25 +135,25 @@
                 <td><a href="esp32v3.html">Heltec V3, 915 MHz</a></td>
                 <td>1</td>
                 <td>See the Heltec V3 page for where to buy</td>
-                <td class="hw-cost">$0</td>
+                <td class="hw-cost">See V3 page</td>
               </tr>
               <tr>
-                <td><a href="#" target="_blank" rel="noopener">Samsung 18650 batteries</a></td>
+                <td><a href="https://www.18650batterystore.com/products/samsung-35e-18650-3500mah-8a-battery" target="_blank" rel="noopener">Samsung 18650 batteries (such as the 35E)</a></td>
                 <td>2</td>
-                <td>Use matching cells from a reputable seller</td>
-                <td class="hw-cost">$0</td>
+                <td>Use two matching cells from a reputable seller</td>
+                <td class="hw-cost">$14</td>
               </tr>
               <tr>
-                <td><a href="#" target="_blank" rel="noopener">2-cell 18650 holder</a></td>
+                <td>2-cell 18650 holder</td>
                 <td>1</td>
                 <td>Wired in parallel, so it stays at 3.7 V</td>
-                <td class="hw-cost">$0</td>
+                <td class="hw-cost">Varies</td>
               </tr>
               <tr>
-                <td><a href="#" target="_blank" rel="noopener">Solar charge board</a></td>
+                <td><a href="https://www.amazon.com/s?k=CN3791+solar+charge+module" target="_blank" rel="noopener">CN3791 solar charge module</a></td>
                 <td>1</td>
-                <td>Sits between the panels and the batteries to stop overcharging</td>
-                <td class="hw-cost">$0</td>
+                <td>Recommended. Stops overcharging. Match it to your panels' voltage</td>
+                <td class="hw-cost">Varies</td>
               </tr>
               <tr>
                 <td><a href="https://a.co/d/0hCQUcfH" target="_blank" rel="noopener">Small solar panels</a></td>
@@ -174,7 +175,7 @@
               </tr>
               <tr class="fw-bold">
                 <td colspan="3">Total</td>
-                <td class="hw-cost">$0</td>
+                <td class="hw-cost">$57 + V3, holder and charge module</td>
               </tr>
             </tbody>
           </table>
@@ -185,7 +186,7 @@
           <li>Flash the firmware first (see <a href="#setup">Setup</a> below).</li>
           <li>Mount the antenna through the side of the box and connect its cable to the V3.
             <b>Never power the radio without an antenna attached.</b></li>
-          <li>Wire the solar panels to the charge board's solar input, and the charge board's battery output to the 18650 holder.
+          <li>Wire the solar panels to the charge module's solar input, and its battery output to the 18650 holder.
             <b>Don't wire the panels straight to the batteries</b>: nothing would stop them overcharging, which can damage the cells or start a fire.</li>
           <li>Wire the battery holder to the V3's battery connector. <b>Double-check polarity</b> before connecting.</li>
           <li>Fix the panels inside the lid facing out, tuck the wiring in, and close the box so the seal sits flat.</li>
