@@ -1,0 +1,268 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Budget Heltec V3 Node: a $33 mesh node built from a Heltec V3, a GPS module and a craft-store box.">
+  <title>ROCMesh - Budget Heltec V3 Node</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/hardware.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main class="hw-page">
+    <div class="container py-vh-4">
+
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-4 fw-bold">Budget Heltec V3 Node</h1>
+          <p class="lead">
+            A Heltec V3, a GPS module and a $2 craft-store box. Proof that getting on the mesh doesn't take much
+            money or skill.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill hw-tag hw-tag-meshcore">MeshCore</span>
+            <span class="badge rounded-pill hw-tag hw-tag-meshtastic">Meshtastic</span>
+            <span class="badge rounded-pill hw-tag hw-tag-role">Companion</span>
+            <span class="badge rounded-pill hw-tag hw-tag-feature">GPS</span>
+            <span class="badge rounded-pill hw-tag hw-tag-price">~$33</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <img class="hw-hero-img" src="../img/hardware/cheapnode-web.jpg"
+            alt="A Heltec V3 and GPS module wired up inside a clear green plastic crayon box, with an antenna on top">
+        </div>
+      </div>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          This is the simplest mesh node we could build. It's a <a href="esp32v3.html">Heltec V3</a> with its antenna, plus
+          a GT-U7 GPS module, tucked into a clear plastic crayon box from Michaels. It runs from any USB power bank,
+          so there's no battery wiring at all.
+        </p>
+        <p>
+          It's not pretty, but it works. That's the point: if you can connect four wires and plug in a USB cable,
+          you can build a mesh node for about $33.
+        </p>
+
+        <table class="table hw-facts border mt-4 mb-0">
+          <tbody>
+            <tr><th scope="row">Processor</th><td>ESP32-S3 on the Heltec V3 (Wi-Fi and Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa, 902-928 MHz (US)</td></tr>
+            <tr><th scope="row">Screen</th><td>The Heltec V3's 0.96" OLED</td></tr>
+            <tr><th scope="row">GPS</th><td>GT-U7 GPS module</td></tr>
+            <tr><th scope="row">Antenna</th><td>The antenna that comes with the Heltec V3</td></tr>
+            <tr><th scope="row">Power</th><td>Any USB power bank, over USB-C</td></tr>
+            <tr><th scope="row">Case</th><td>Clear plastic crayon box from Michaels</td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Role in the mesh</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>First build</h3>
+              <p class="mb-0">
+                What it's for. It's cheap, quick, and needs almost no tools, so it's a great way to learn how a node
+                goes together before you build something fancier.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Home base companion</h3>
+              <p class="mb-0">
+                Plug it into a phone charger by a window and leave it on. The screen shows new messages,
+                and you can connect from your phone or computer.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-not-recommended mb-2">Not recommended</span>
+              <h3>Outdoor repeater</h3>
+              <p class="mb-0">
+                It'll relay indoors, but a crayon box won't survive the weather, and the ESP32 drains a power bank quickly.
+                For a fixed outdoor site, use the <a href="rak1w.html">RAK 1W Repeater</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Where to buy and what it costs</h2>
+        <p>
+          There's no kit for this one. Everything comes from the parts list below. Make sure the Heltec V3 is the
+          <b>915 MHz</b> version, and bring your own USB power bank.
+        </p>
+      </section>
+
+      <section>
+        <h2>The build</h2>
+        <p>
+          The Heltec V3 and GPS module sit loose in the crayon box, with the antenna poking out the top and a USB cable
+          running out the side. There's no case to print and only four wires to connect.
+        </p>
+
+        <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
+        <div class="table-responsive">
+          <table class="table hw-bom">
+            <thead>
+              <tr><th>Part</th><th>Qty</th><th>Notes</th><th class="hw-cost">Approx. cost</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://a.co/d/0hSxawRo" target="_blank" rel="noopener">Heltec V3 with antenna, 915 MHz</a></td>
+                <td>1</td>
+                <td>Antenna included</td>
+                <td class="hw-cost">$21</td>
+              </tr>
+              <tr>
+                <td><a href="https://a.co/d/09CeCx7i" target="_blank" rel="noopener">GT-U7 GPS module</a></td>
+                <td>1</td>
+                <td>Optional, if you want to share your location</td>
+                <td class="hw-cost">$10</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.michaels.com/product/clear-stacking-crayon-box-by-simply-tidy-10584304" target="_blank" rel="noopener">Simply Tidy clear stacking crayon box</a></td>
+                <td>1</td>
+                <td>From Michaels</td>
+                <td class="hw-cost">$2</td>
+              </tr>
+              <tr>
+                <td>USB power bank</td>
+                <td>1</td>
+                <td>Bring your own</td>
+                <td class="hw-cost">$0</td>
+              </tr>
+              <tr class="fw-bold">
+                <td colspan="3">Total</td>
+                <td class="hw-cost">$33</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="h5 fw-bold mt-4">Assembly notes</h3>
+        <ol>
+          <li>Flash the firmware first (see <a href="#setup">Setup</a> below).</li>
+          <li>Screw the antenna onto the Heltec V3. <b>Never power the radio without an antenna attached.</b></li>
+          <li>Wire the GT-U7 to the Heltec V3 (from the <a href="https://meshtastic.org/docs/hardware/devices/heltec-automation/lora32/peripherals/" target="_blank" rel="noopener">Meshtastic GPS guide</a>):
+            <ul>
+              <li>GPS <b>TXD</b> to V3 <b>GPIO 48</b></li>
+              <li>GPS <b>RXD</b> to V3 <b>GPIO 47</b></li>
+              <li>GPS <b>VCC</b> to the V3's <b>3V/5V</b> pin</li>
+              <li>GPS <b>GND</b> to the V3's <b>GND</b></li>
+            </ul>
+          </li>
+          <li>In the Meshtastic app, go to <b>Radio Configuration &gt; Position</b> and set <b>GPS RX pin to 48</b> and
+            <b>GPS TX pin to 47</b>. If the app says "No GPS present", double-check those two wires and settings.
+            If it says "No GPS lock", move the node somewhere with a view of the sky.</li>
+          <li>Optional: the GPS uses a lot of power. The <a href="https://meshtastic.org/docs/hardware/devices/heltec-automation/lora32/peripherals/" target="_blank" rel="noopener">Meshtastic guide</a>
+            shows how to add a small MOSFET (such as a 2N7000) on <b>GPIO 46</b> so the firmware can switch the GPS off.
+            Then set the <b>GPS enable pin to 46</b>, and press the V3's user button three times to turn the GPS on or off.</li>
+          <li>Drop everything in the box, run the USB cable out the side, and plug it into your power bank.</li>
+        </ol>
+
+        <h3 class="h5 fw-bold mt-4">Photos</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/cheapnode-web.jpg" alt="The finished budget node in its crayon box">
+              <figcaption>The finished node</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <div class="hw-photo-empty">Photo coming soon</div>
+              <figcaption>The parts</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <div class="hw-photo-empty">Photo coming soon</div>
+              <figcaption>GPS wiring</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="setup">
+        <h2>Setup</h2>
+        <p>
+          Flash the firmware from a web browser (Chrome or Edge) with the Heltec V3 plugged in over USB-C,
+          then follow our recommended settings. See the <a href="esp32v3.html">Heltec V3 page</a> for more on the board itself.
+        </p>
+        <ul>
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
+            then see <a href="../meshcore/companion-settings.html">MeshCore companion settings</a>.</li>
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
+            then see <a href="../meshtastic/companion-settings.html">Meshtastic companion settings</a>.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/hardware.js"></script>
+
+</body>
+
+</html>

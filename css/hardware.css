@@ -1,0 +1,107 @@
+/* Shared styles for hardware/ pages */
+
+/* ---------- Hardware index cards ---------- */
+.hw-card .card-img-top { aspect-ratio: 4 / 3; object-fit: cover; object-position: var(--focus, 50% 50%); background: #e9ecef; }
+.hw-card { transition: transform .15s ease, box-shadow .15s ease; }
+.hw-card:hover { transform: translateY(-3px); box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .12) !important; }
+
+/* ---------- Device pages ---------- */
+.hw-page section { margin-top: 3rem; }
+.hw-page h2 { font-weight: 700; margin-bottom: 1rem; }
+
+.hw-hero-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: var(--focus, 50% 50%);
+  border-radius: 1rem;
+  background: #e9ecef;
+}
+
+/* Quick facts list */
+.hw-facts { border-radius: 1rem; overflow: hidden; }
+.hw-facts th { width: 40%; font-weight: 600; }
+
+/* Role cards: "good fit" / "works" / "not recommended" */
+.hw-role { border-radius: 1rem; height: 100%; padding: 1.25rem; border: 1px solid #dee2e6; }
+.hw-role h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: .5rem; }
+.hw-role .badge { font-weight: 600; }
+
+/* Photos and empty photo slots */
+.hw-photo { margin: 0; }
+.hw-photo img,
+.hw-photo .hw-photo-empty {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: var(--focus, 50% 50%);
+  border-radius: 1rem;
+  background: #e9ecef;
+}
+.hw-photo .hw-photo-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  border: 2px dashed #ced4da;
+}
+.hw-photo figcaption { font-size: .875rem; color: #6c757d; margin-top: .5rem; }
+
+/* Bill of materials */
+.hw-bom td, .hw-bom th { vertical-align: middle; }
+.hw-bom .hw-cost { white-space: nowrap; text-align: end; }
+
+/* Rounded tags at the top of each device page */
+.hw-tag { font-weight: 600; }
+.hw-tag-meshcore   { background-color: #13192a; color: #fff; }
+.hw-tag-meshtastic { background-color: #67EA94; color: #13192a; }
+.hw-tag-role       { background-color: #dbe7ff; color: #1e3a8a; }
+.hw-tag-low-power  { background-color: #d5f2ec; color: #0f5e52; }
+.hw-tag-high-power { background-color: #ffe2d1; color: #9a3412; }
+.hw-tag-wifi       { background-color: #ece3ff; color: #5b21b6; }
+.hw-tag-feature    { background-color: #e9ecef; color: #343a40; }
+.hw-tag-price      { background-color: #fff3cd; color: #6b4e00; border: 1px solid #f1d98a; }
+
+/* Role ratings: Recommended = text-bg-success (green), Not compatible = text-bg-danger (red) */
+.hw-role .hw-rating-works           { background-color: #f66f00; color: #212529; }
+.hw-role .hw-rating-not-recommended { background-color: #ffce2b; color: #212529; }
+
+/* Click-to-enlarge photo viewer (js/hardware.js) */
+.hw-zoomable { cursor: zoom-in; }
+.hw-zoomable:focus-visible { outline: 3px solid #67EA94; outline-offset: 3px; }
+.hw-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(10, 13, 22, .92);
+  cursor: zoom-out;
+}
+.hw-lightbox[hidden] { display: none; }
+.hw-lightbox-figure { margin: 0; text-align: center; }
+.hw-lightbox-figure img {
+  max-width: 100%;
+  max-height: calc(100vh - 6rem);
+  border-radius: .5rem;
+  cursor: default;
+}
+.hw-lightbox-figure figcaption { color: #e9ecef; margin-top: .75rem; font-size: .95rem; }
+.hw-lightbox-close {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .15);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.hw-lightbox-close:hover,
+.hw-lightbox-close:focus-visible { background: rgba(255, 255, 255, .3); outline: none; }

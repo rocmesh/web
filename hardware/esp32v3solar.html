@@ -1,0 +1,282 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Heltec V3 Solar Repeater: a budget solar repeater built from a Heltec V3, two 18650 batteries and small solar panels.">
+  <title>ROCMesh - Heltec V3 Solar Repeater</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/hardware.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main class="hw-page">
+    <div class="container py-vh-4">
+
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-4 fw-bold">Heltec V3 Solar Repeater</h1>
+          <p class="lead">
+            A Heltec V3, two 18650 batteries and a pair of small solar panels in a water-resistant box.
+            A budget solar repeater from parts you can buy anywhere.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill hw-tag hw-tag-meshcore">MeshCore</span>
+            <span class="badge rounded-pill hw-tag hw-tag-meshtastic">Meshtastic</span>
+            <span class="badge rounded-pill hw-tag hw-tag-role">Repeater</span>
+            <span class="badge rounded-pill hw-tag hw-tag-feature">Solar</span>
+            <span class="badge rounded-pill hw-tag hw-tag-price">~$Price</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <img class="hw-hero-img" src="../img/hardware/esp32v3_repeater_closed-web.jpg" style="--focus: 50% 50%"
+            alt="The finished solar repeater: a clear water-resistant box with a solar panel inside the lid and an antenna on top">
+        </div>
+      </div>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          This is our budget solar repeater. A <a href="esp32v3.html">Heltec V3</a> and two Samsung 18650 batteries sit inside
+          a clear, water-resistant storage box from Harbor Freight. Two small solar panels face up through the clear lid,
+          and an outdoor antenna mounts through the side of the box.
+        </p>
+        <p>
+          The ESP32 in the V3 uses more power than nRF52 boards, so this build leans on two batteries to get through
+          the night and cloudy days. Give it a spot with plenty of sun. For a repeater that's easier to keep running all year,
+          see the <a href="rak1w.html">RAK 1W Repeater</a>.
+        </p>
+
+        <table class="table hw-facts border mt-4 mb-0">
+          <tbody>
+            <tr><th scope="row">Processor</th><td>ESP32-S3 on the Heltec V3 (Wi-Fi and Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa, 902-928 MHz (US)</td></tr>
+            <tr><th scope="row">Screen</th><td>The Heltec V3's 0.96" OLED (hidden inside the box)</td></tr>
+            <tr><th scope="row">Antenna</th><td>Outdoor 915 MHz antenna, mounted through the box</td></tr>
+            <tr><th scope="row">Solar</th><td>Two small solar panels, behind the clear lid</td></tr>
+            <tr><th scope="row">Battery</th><td>Two Samsung 18650 cells, wired in parallel</td></tr>
+            <tr><th scope="row">Weatherproofing</th><td>Water-resistant storage box with a rubber seal</td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Role in the mesh</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-works mb-2">Works</span>
+              <h3>Solar repeater</h3>
+              <p class="mb-0">
+                What it's built for. In a sunny spot it keeps relaying around the clock, but long cloudy stretches
+                can drain it, since the ESP32 is power-hungry. For the most reliable solar repeater, see the
+                <a href="rak1w.html">RAK 1W Repeater</a>.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Temporary repeater</h3>
+              <p class="mb-0">
+                Two full batteries carry it for a while even without sun, so it's great for events and weekend trips.
+                Set it somewhere high and come back for it later.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-not-recommended mb-2">Not recommended</span>
+              <h3>Companion</h3>
+              <p class="mb-0">
+                It'll pair with a phone, but it's a box meant to sit outside. For a companion on the same board,
+                see the <a href="esp32v3handheld.html">Heltec V3 Handheld</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Where to buy and what it costs</h2>
+        <p>
+          There's no kit for this build. Everything comes from the parts list below.
+          Make sure the Heltec V3 is the <b>915 MHz</b> version.
+        </p>
+      </section>
+
+      <section>
+        <h2>The build</h2>
+        <p>
+          The V3, the battery holder and a small solar charge board sit in the bottom of the box, with the panels in the lid
+          and the antenna mounted through the side. The charge board sits between the panels and the batteries so they
+          can't be overcharged.
+        </p>
+
+        <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
+        <div class="table-responsive">
+          <table class="table hw-bom">
+            <thead>
+              <tr><th>Part</th><th>Qty</th><th>Notes</th><th class="hw-cost">Approx. cost</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="esp32v3.html">Heltec V3, 915 MHz</a></td>
+                <td>1</td>
+                <td>See the Heltec V3 page for where to buy</td>
+                <td class="hw-cost">$0</td>
+              </tr>
+              <tr>
+                <td><a href="#" target="_blank" rel="noopener">Samsung 18650 batteries</a></td>
+                <td>2</td>
+                <td>Use matching cells from a reputable seller</td>
+                <td class="hw-cost">$0</td>
+              </tr>
+              <tr>
+                <td><a href="#" target="_blank" rel="noopener">2-cell 18650 holder</a></td>
+                <td>1</td>
+                <td>Wired in parallel, so it stays at 3.7 V</td>
+                <td class="hw-cost">$0</td>
+              </tr>
+              <tr>
+                <td><a href="#" target="_blank" rel="noopener">Solar charge board</a></td>
+                <td>1</td>
+                <td>Sits between the panels and the batteries to stop overcharging</td>
+                <td class="hw-cost">$0</td>
+              </tr>
+              <tr>
+                <td><a href="https://a.co/d/0hCQUcfH" target="_blank" rel="noopener">Small solar panels</a></td>
+                <td>2</td>
+                <td>Mounted inside the clear lid</td>
+                <td class="hw-cost">$16</td>
+              </tr>
+              <tr>
+                <td><a href="https://a.co/d/07ZVZvNV" target="_blank" rel="noopener">Outdoor 915 MHz antenna</a></td>
+                <td>1</td>
+                <td>Check it comes with a cable for the V3's IPEX connector</td>
+                <td class="hw-cost">$19</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.harborfreight.com/large-water-resistant-storage-container-56578.html" target="_blank" rel="noopener">Harbor Freight water-resistant storage box (large)</a></td>
+                <td>1</td>
+                <td>Clear lid lets the panels see the sun</td>
+                <td class="hw-cost">$8</td>
+              </tr>
+              <tr class="fw-bold">
+                <td colspan="3">Total</td>
+                <td class="hw-cost">$0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="h5 fw-bold mt-4">Assembly notes</h3>
+        <ol>
+          <li>Flash the firmware first (see <a href="#setup">Setup</a> below).</li>
+          <li>Mount the antenna through the side of the box and connect its cable to the V3.
+            <b>Never power the radio without an antenna attached.</b></li>
+          <li>Wire the solar panels to the charge board's solar input, and the charge board's battery output to the 18650 holder.
+            <b>Don't wire the panels straight to the batteries</b>: nothing would stop them overcharging, which can damage the cells or start a fire.</li>
+          <li>Wire the battery holder to the V3's battery connector. <b>Double-check polarity</b> before connecting.</li>
+          <li>Fix the panels inside the lid facing out, tuck the wiring in, and close the box so the seal sits flat.</li>
+        </ol>
+
+        <h3 class="h5 fw-bold mt-4">Photos</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/esp32v3_repeater_parts-web.jpg"
+                alt="The parts laid out: two solar panels, a two-cell 18650 holder with pink batteries, and a Heltec V3">
+              <figcaption>The parts</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/esp32v3_repeater_open-web.jpg" style="--focus: 50% 55%"
+                alt="The repeater open, showing the V3, batteries and wiring inside the box">
+              <figcaption>Inside the box</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/esp32v3_repeater_closed-web.jpg" style="--focus: 50% 50%"
+                alt="The repeater closed, with the solar panel visible through the lid">
+              <figcaption>Sealed up</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="setup">
+        <h2>Setup</h2>
+        <p>
+          Flash the firmware from a web browser (Chrome or Edge) with the Heltec V3 plugged in over USB-C,
+          then follow our recommended repeater settings. To save power, turn off Wi-Fi and the screen once it's set up.
+        </p>
+        <ul>
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
+            then see <a href="../meshcore/repeater-settings.html">MeshCore repeater settings</a>.</li>
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
+            then see <a href="../meshtastic/infrastructure-settings.html">Meshtastic infrastructure settings</a>.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/hardware.js"></script>
+
+</body>
+
+</html>
