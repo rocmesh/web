@@ -40,7 +40,7 @@
         </div>
         <div class="col-12 col-lg-6">
           <img class="hw-hero-img" src="../img/hardware/tdeck-web.jpg" style="--focus: 50% 40%"
-            alt="A LilyGO T-Deck Plus with an antenna, standing in a grey 3D-printed stand on a desk">
+            alt="A LilyGO T-Deck Plus with an antenna, standing in a gray 3D-printed stand on a desk">
         </div>
       </div>
 
@@ -174,8 +174,12 @@
 
       <section id="setup">
         <h2>Setup</h2>
+        <div class="alert alert-danger hw-callout hw-antenna-warning" role="alert">
+          <b>Connect the antenna before you power it on.</b> Powering a LoRa radio without an antenna attached,
+          even just over USB to flash it, can permanently damage it.
+        </div>
         <p>
-          <b>Attach the antenna before you power it on or flash it.</b> Then flash the firmware from a web browser
+          Flash the firmware from a web browser
           (Chrome or Edge) with the T-Deck Plus plugged in over USB-C, and pick <b>T-Deck</b> from the flasher's device list (the Plus uses the same firmware).
           For Meshtastic, enable the on-screen interface (Meshtastic UI) when flashing.
         </p>
@@ -230,7 +234,7 @@
     </div>
 
     <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
-        target="_blank">templatedeck.com</a>
+        target="_blank" rel="noopener">templatedeck.com</a>
     </div>
   </footer>
 
