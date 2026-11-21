@@ -157,8 +157,12 @@
 
       <section id="setup">
         <h2>Setup</h2>
+        <div class="alert alert-danger hw-callout hw-antenna-warning" role="alert">
+          <b>Connect the antenna before you power it on.</b> Powering a LoRa radio without an antenna attached,
+          even just over USB to flash it, can permanently damage it.
+        </div>
         <p>
-          <b>Attach the antenna before you power it on.</b> Then flash the firmware from a web browser (Chrome or Edge) with the Heltec V4 plugged in over USB-C,
+          Flash the firmware from a web browser (Chrome or Edge) with the Heltec V4 plugged in over USB-C,
           then follow our recommended settings. In the flasher, pick <b>Heltec V4</b> or <b>Heltec V4-R8</b> to match
           the board you bought. Flashing the wrong one won't work. If the flasher can't find the board, hold the
           PRG button, press RST once, then let go of PRG and try again.
@@ -210,7 +214,7 @@
     </div>
 
     <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
-        target="_blank">templatedeck.com</a>
+        target="_blank" rel="noopener">templatedeck.com</a>
     </div>
   </footer>
 

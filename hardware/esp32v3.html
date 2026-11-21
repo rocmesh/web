@@ -39,7 +39,7 @@
         </div>
         <div class="col-12 col-lg-6">
           <img class="hw-hero-img" src="../img/hardware/esp32v3-web.jpg"
-            alt="A Heltec ESP32 V3 build in a grey 3D-printed case with an antenna">
+            alt="A Heltec ESP32 V3 build in a gray 3D-printed case with an antenna">
         </div>
       </div>
 
@@ -152,6 +152,10 @@
 
       <section id="setup">
         <h2>Setup</h2>
+        <div class="alert alert-danger hw-callout hw-antenna-warning" role="alert">
+          <b>Connect the antenna before you power it on.</b> Powering a LoRa radio without an antenna attached,
+          even just over USB to flash it, can permanently damage it.
+        </div>
         <p>
           Flash the firmware from a web browser (Chrome or Edge) with the Heltec V3 plugged in over USB-C,
           then follow our recommended settings.
@@ -204,7 +208,7 @@
     </div>
 
     <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
-        target="_blank">templatedeck.com</a>
+        target="_blank" rel="noopener">templatedeck.com</a>
     </div>
   </footer>
 

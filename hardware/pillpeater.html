@@ -1,0 +1,260 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Pillpeater: a pocket-sized temporary repeater made from a Heltec V4, a 2000 mAh battery and a pharmacy pill bottle.">
+  <title>ROCMesh - Pillpeater</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/hardware.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main class="hw-page">
+    <div class="container py-vh-4">
+
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-4 fw-bold">Pillpeater</h1>
+          <p class="lead">
+            A Heltec V4 and a 2000 mAh battery in a pharmacy pill bottle, with the antenna mounted through the cap.
+            Small enough to throw in a bag and set up anywhere as a temporary repeater.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill hw-tag hw-tag-meshcore">MeshCore</span>
+            <span class="badge rounded-pill hw-tag hw-tag-meshtastic">Meshtastic</span>
+            <span class="badge rounded-pill hw-tag hw-tag-role">Repeater</span>
+            <span class="badge rounded-pill hw-tag hw-tag-high-power">High power</span>
+            <span class="badge rounded-pill hw-tag hw-tag-price">~$10 + V4</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <img class="hw-hero-img" src="../img/hardware/pillpeater/assembled-web.jpg" style="--focus: 50% 45%"
+            alt="The Pillpeater: an orange pill bottle with a Heltec V4 inside and a black antenna sticking up from the white cap">
+        </div>
+      </div>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          The Pillpeater is a <a href="esp32v4.html">Heltec V4</a> and a MakerFocus 2000 mAh LiPo battery packed into an
+          empty pharmacy pill bottle. The V4's stock antenna is mounted through a hole in the cap, so it stands straight up
+          when the bottle is upright.
+        </p>
+        <p>
+          It's a sibling of the <a href="icepeter.html">Icepeter</a>, but smaller and with a stronger radio: the V4 transmits at
+          up to 28 dBm, compared with 21 dBm on the V3. Set it on a windowsill, a fence post or the roof of a car to fill a gap,
+          then bring it home to recharge.
+        </p>
+
+        <table class="table hw-facts border mt-4 mb-0">
+          <tbody>
+            <tr><th scope="row">Processor</th><td>ESP32-S3 on the Heltec V4 (Wi-Fi and Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa with a power amplifier, up to 28 dBm, 902-928 MHz (US)</td></tr>
+            <tr><th scope="row">Antenna</th><td>The antenna that comes with the V4, mounted through the cap</td></tr>
+            <tr><th scope="row">Battery</th><td>MakerFocus 2000 mAh LiPo, charged over the V4's USB-C port</td></tr>
+            <tr><th scope="row">Case</th><td>An empty pharmacy pill bottle</td></tr>
+            <tr><th scope="row">Weatherproofing</th><td>The cap keeps out light rain, but it isn't sealed</td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Role in the mesh</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Temporary repeater</h3>
+              <p class="mb-0">
+                What it's built for. Bring it to an event, a hike or an emergency and set it somewhere high to fill a
+                coverage gap. It runs until the battery is empty, so charge it fully before you go.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-works mb-2">Works</span>
+              <h3>Companion</h3>
+              <p class="mb-0">
+                It's small enough to carry and pairs with your phone like any V4. Expect to charge it often, though:
+                the ESP32 and the V4's stronger radio drain a 2000 mAh battery quickly.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-not-recommended mb-2">Not recommended</span>
+              <h3>Permanent repeater</h3>
+              <p class="mb-0">
+                With no solar and a small battery, it'll need to come down to recharge. For one that stays up, see the
+                <a href="repeater.html">Basic Repeater</a> or <a href="rak1w.html">RAK 1W Repeater</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Where to buy and what it costs</h2>
+        <p>
+          There's no kit for this build. Everything comes from the parts list below, plus an empty pill bottle.
+          Make sure the Heltec V4 is the <b>915 MHz</b> version.
+        </p>
+      </section>
+
+      <section>
+        <h2>The build</h2>
+        <p>
+          The board and battery sit inside the bottle, and the antenna is mounted through the cap.
+          Pick a bottle wide enough for the V4 and battery to slide in.
+        </p>
+
+        <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
+        <div class="table-responsive">
+          <table class="table hw-bom">
+            <thead>
+              <tr><th>Part</th><th>Qty</th><th>Notes</th><th class="hw-cost">Approx. cost</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="esp32v4.html">Heltec V4, 915 MHz</a></td>
+                <td>1</td>
+                <td>Comes with the antenna used here. See the Heltec V4 page for where to buy</td>
+                <td class="hw-cost">See V4 page</td>
+              </tr>
+              <tr>
+                <td><a href="https://a.co/d/07PMyakK" target="_blank" rel="noopener">MakerFocus 2000 mAh LiPo battery</a></td>
+                <td>1</td>
+                <td>Check the plug and polarity match the V4's battery connector</td>
+                <td class="hw-cost">$10</td>
+              </tr>
+              <tr>
+                <td>Pharmacy pill bottle</td>
+                <td>1</td>
+                <td>Empty and clean, wide enough for the V4</td>
+                <td class="hw-cost">Free</td>
+              </tr>
+              <tr class="fw-bold">
+                <td colspan="3">Total</td>
+                <td class="hw-cost">$10 + Heltec V4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small text-secondary">Prices last checked November 2026.</p>
+
+        <h3 class="h5 fw-bold mt-4">Assembly notes</h3>
+        <ol>
+          <li>Flash the firmware first (see <a href="#setup">Setup</a> below).</li>
+          <li>Drill a hole in the center of the cap and mount the antenna connector through it.</li>
+          <li>Connect the antenna cable to the V4. <b>Never power the radio without an antenna attached.</b></li>
+          <li>Check the battery's polarity and plug it into the V4.</li>
+          <li>Slide the board and battery into the bottle and snap the cap on.</li>
+        </ol>
+
+        <h3 class="h5 fw-bold mt-4">Photos</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/pillpeater/parts-web.jpg"
+                alt="The parts laid out: an orange pill bottle, its cap with the antenna mounted, a MakerFocus 2000 mAh battery and a Heltec V4">
+              <figcaption>The parts</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/pillpeater/antenna-web.jpg" style="--focus: 50% 55%"
+                alt="The underside of the pill bottle cap with the antenna connector mounted through the center">
+              <figcaption>The antenna mounted through the cap</figcaption>
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="hw-photo">
+              <img src="../img/hardware/pillpeater/assembled-web.jpg" style="--focus: 50% 45%"
+                alt="The assembled Pillpeater standing upright with the antenna on top">
+              <figcaption>Assembled</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="setup">
+        <h2>Setup</h2>
+        <div class="alert alert-danger hw-callout hw-antenna-warning" role="alert">
+          <b>Connect the antenna before you power it on.</b> Powering a LoRa radio without an antenna attached,
+          even just over USB to flash it, can permanently damage it.
+        </div>
+        <p>
+          Flash the firmware from a web browser (Chrome or Edge)
+          with the Heltec V4 plugged in over USB-C, and follow our recommended settings. In the flasher, pick
+          <b>Heltec V4</b> or <b>Heltec V4-R8</b> to match your board. To make the battery last, turn off Wi-Fi and the
+          screen once it's set up.
+        </p>
+        <ul>
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
+            then see <a href="../meshcore/repeater-settings.html">MeshCore repeater settings</a>.</li>
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
+            then see <a href="../meshtastic/infrastructure-settings.html">Meshtastic infrastructure settings</a>.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank" rel="noopener">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/hardware.js"></script>
+
+</body>
+
+</html>

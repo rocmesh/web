@@ -66,6 +66,29 @@
 .hw-role .hw-rating-works           { background-color: #f66f00; color: #212529; }
 .hw-role .hw-rating-not-recommended { background-color: #ffce2b; color: #212529; }
 
+/* Step-by-step build photos: show the whole photo, portrait or landscape */
+.hw-steps > .hw-step { padding: 1.5rem 0; border-top: 1px solid #dee2e6; }
+.hw-steps > .hw-step:first-child { border-top: 0; padding-top: .5rem; }
+.hw-step .hw-photo img {
+  aspect-ratio: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 26rem;
+  display: block;
+  margin: 0 auto;
+}
+.hw-callout { border-radius: 1rem; font-size: .95rem; }
+.hw-step-num {
+  display: inline-block;
+  margin-right: .5rem;
+  padding: .15rem .6rem;
+  border-radius: 50rem;
+  background-color: #13192a;
+  color: #fff;
+  font-size: .8rem;
+  vertical-align: middle;
+}
+
 /* Click-to-enlarge photo viewer (js/hardware.js) */
 .hw-zoomable { cursor: zoom-in; }
 .hw-zoomable:focus-visible { outline: 3px solid #67EA94; outline-offset: 3px; }
