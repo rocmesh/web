@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="Device Name: what it is, its role on the mesh, where to buy it, and the ROCMesh build.">
-  <title>ROCMesh - Device Name</title>
+  <meta name="description" content="Basic Repeater: a $15 solar spotlight rebuilt into a solar-powered mesh repeater, with a parts list and step-by-step build photos.">
+  <title>ROCMesh - Basic Repeater</title>
   <link rel="stylesheet" href="../css/theme.min.css">
   <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/hardware.css">
@@ -19,44 +19,53 @@
   <main class="hw-page">
     <div class="container py-vh-4">
 
-      <div class="row align-items-center g-5 mt-4">
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
         <div class="col-12 col-lg-6">
-          <h1 class="display-4 fw-bold">Device Name</h1>
+          <h1 class="display-4 fw-bold">Basic Repeater</h1>
           <p class="lead">
-            One-sentence tagline describing the device and what it's best at.
+            A $15 solar spotlight from Lowe's, rebuilt around a RAK board and an Alfa antenna. It charges itself
+            from its own panel, so you can mount it and forget it.
           </p>
 
           <div class="d-flex flex-wrap gap-2">
             <span class="badge rounded-pill hw-tag hw-tag-meshcore">MeshCore</span>
             <span class="badge rounded-pill hw-tag hw-tag-meshtastic">Meshtastic</span>
-            <span class="badge rounded-pill hw-tag hw-tag-role">Role</span>
-            <span class="badge rounded-pill hw-tag hw-tag-feature">Feature</span>
-            <span class="badge rounded-pill hw-tag hw-tag-price">~$Price</span>
+            <span class="badge rounded-pill hw-tag hw-tag-role">Repeater</span>
+            <span class="badge rounded-pill hw-tag hw-tag-low-power">Low power</span>
+            <span class="badge rounded-pill hw-tag hw-tag-feature">Solar</span>
+            <span class="badge rounded-pill hw-tag hw-tag-price">~$97</span>
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <img class="hw-hero-img" src="../img/hardware/device.jpg" alt="Photo description">
+          <img class="hw-hero-img" src="../img/hardware/repeater/finished_side-web.jpg" style="--focus: 50% 47%"
+            alt="The finished Basic Repeater from the side, with its solar panel angled out and the Alfa antenna pointing up">
         </div>
       </div>
 
       <section>
         <h2>What it is</h2>
         <p>
-          Describe what the device is, who makes it, and what's inside.
+          The Basic Repeater starts as a Harbor Breeze solar spotlight. The solar panel housing already has a battery,
+          a charging panel and a weatherproof box, so we swap the light's circuit board for a RAK WisBlock board
+          (RAK4631 core on a RAK19007 base) and mount an Alfa 5 dBi antenna on a 3D-printed arm.
         </p>
         <p>
-          Describe how it's sold and what you need to add to get it running.
+          The RAK board runs on Nordic's low-power nRF52840 chip, so the small panel is enough to keep it charged.
+          It takes an afternoon, some basic soldering and about $97 in parts. The step-by-step photos below
+          walk through the whole build.
         </p>
 
         <table class="table hw-facts border mt-4 mb-0">
           <tbody>
-            <tr><th scope="row">Processor</th><td>Processor</td></tr>
-            <tr><th scope="row">Radio</th><td>Radio chip and frequency</td></tr>
-            <tr><th scope="row">Screen</th><td>Screen</td></tr>
-            <tr><th scope="row">GPS</th><td>GPS</td></tr>
-            <tr><th scope="row">Antenna</th><td>Antenna</td></tr>
-            <tr><th scope="row">Power</th><td>Power and battery</td></tr>
-            <tr><th scope="row">Firmware</th><td>Supported firmware</td></tr>
+            <tr><th scope="row">Processor</th><td>Nordic nRF52840 on the RAK4631 core (Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 LoRa, 902-928 MHz (US)</td></tr>
+            <tr><th scope="row">Antenna</th><td>Alfa 5 dBi omni with an N-type connector, on a u.FL to N pigtail</td></tr>
+            <tr><th scope="row">Power</th><td>The light's own solar panel and rechargeable battery, wired to the RAK board's solar and battery connectors</td></tr>
+            <tr><th scope="row">Case</th><td>The light's solar panel housing, with the antenna on a 3D-printed mounting arm</td></tr>
+            <tr><th scope="row">Mounting</th><td>A 3D-printed dovetail mount, screwed to a wall, fascia or post</td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic</td></tr>
           </tbody>
         </table>
       </section>
@@ -67,27 +76,30 @@
           <div class="col">
             <div class="hw-role">
               <span class="badge text-bg-success mb-2">Recommended</span>
-              <h3>Role</h3>
+              <h3>Solar repeater</h3>
               <p class="mb-0">
-                Why this device is a good fit for this role.
+                What it's built for. Mount it as high as you can with a clear view of the sky, and it keeps itself
+                charged and relays traffic around the clock.
               </p>
             </div>
           </div>
           <div class="col">
             <div class="hw-role">
               <span class="badge hw-rating-works mb-2">Works</span>
-              <h3>Role</h3>
+              <h3>Temporary repeater</h3>
               <p class="mb-0">
-                How well this device works in this role, and its limits.
+                It runs anywhere you can screw down the dovetail mount, but it's built to stay put and is bulkier than a build like the
+                <a href="pillpeater.html">Pillpeater</a> or <a href="icepeter.html">Icepeter</a>.
               </p>
             </div>
           </div>
           <div class="col">
             <div class="hw-role">
               <span class="badge hw-rating-not-recommended mb-2">Not recommended</span>
-              <h3>Role</h3>
+              <h3>Companion</h3>
               <p class="mb-0">
-                How this device copes in this role, why it isn't the best choice, and what to use instead.
+                It will pair with a phone, but it's a sealed box meant to stay outside. For a node you carry, see the
+                <a href="wismeshpocket.html">RAK WisMesh Pocket V2</a>, which uses the same RAK core.
               </p>
             </div>
           </div>
@@ -97,34 +109,17 @@
       <section>
         <h2>Where to buy and what it costs</h2>
         <p>
-          Buying advice, such as which frequency version to choose and which options affect the price.
+          There's no kit for this build. The light comes from Lowe's, the screws and nuts from Home Depot, and the rest from
+          Amazon. Everything is linked in the parts list below. Make sure the RAK kit is the <b>915 MHz</b> (US) version. You'll also need to 3D print the antenna arm and mount.
         </p>
-        <div class="table-responsive">
-          <table class="table align-middle">
-            <thead>
-              <tr><th>Seller</th><th>Notes</th><th class="text-end">Approx. price</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="#" target="_blank" rel="noopener">Seller</a></td>
-                <td>Notes</td>
-                <td class="text-end text-nowrap">$0</td>
-              </tr>
-              <tr>
-                <td><a href="#" target="_blank" rel="noopener">Seller</a></td>
-                <td>Notes</td>
-                <td class="text-end text-nowrap">$0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="small text-secondary">Prices last checked Month Year.</p>
       </section>
 
       <section>
         <h2>The build</h2>
         <p>
-          Describe the build and what it's made of.
+          The light's own circuit board and switch come out, and the RAK board takes their place, wired to the light's
+          battery and solar panel with JST pigtails. The antenna cable runs out through a 3D-printed mounting arm to the Alfa
+          antenna on top. You'll need a soldering iron, wire strippers, a screwdriver and access to a 3D printer.
         </p>
 
         <h3 class="h5 fw-bold mt-4">Bill of materials</h3>
@@ -135,50 +130,447 @@
             </thead>
             <tbody>
               <tr>
-                <td><a href="#" target="_blank" rel="noopener">Part</a></td>
+                <td><a href="https://www.lowes.com/pd/Harbor-Breeze-60-Lumens-1-Watt-Black-Warm-White-Solar-LED-Spot-light/5018244381" target="_blank" rel="noopener">Harbor Breeze solar spotlight</a></td>
                 <td>1</td>
-                <td>Notes</td>
-                <td class="hw-cost">$0</td>
+                <td>Lowe's. Its panel, battery and housing become the repeater</td>
+                <td class="hw-cost">$15</td>
               </tr>
               <tr>
-                <td><a href="#" target="_blank" rel="noopener">Part</a></td>
+                <td><a href="https://a.co/d/0hF42sZa" target="_blank" rel="noopener">RAK WisBlock starter kit, 915 MHz</a></td>
                 <td>1</td>
-                <td>Notes</td>
-                <td class="hw-cost">$0</td>
+                <td>RAK4631 core on a RAK19007 base board</td>
+                <td class="hw-cost">$35</td>
+              </tr>
+              <tr>
+                <td><a href="https://a.co/d/03oZTLv0" target="_blank" rel="noopener">Alfa 5 dBi antenna</a></td>
+                <td>1</td>
+                <td>915 MHz, N-type connector</td>
+                <td class="hw-cost">$19</td>
+              </tr>
+              <tr>
+                <td><a href="https://a.co/d/04dOE8ww" target="_blank" rel="noopener">u.FL to N-type pigtail</a></td>
+                <td>1</td>
+                <td>Connects the RAK board to the antenna through the mounting arm</td>
+                <td class="hw-cost">$8</td>
+              </tr>
+              <tr>
+                <td><a href="https://a.co/d/07PPVWqc" target="_blank" rel="noopener">JST ZH 1.5 mm 2-pin pigtails</a></td>
+                <td>1 pack</td>
+                <td>For the solar panel. Pack of 10</td>
+                <td class="hw-cost">$8</td>
+              </tr>
+              <tr>
+                <td><a href="https://a.co/d/07E1zvjk" target="_blank" rel="noopener">JST PH 2.0 mm 2-pin pigtails</a></td>
+                <td>1 pack</td>
+                <td>For the battery. Pack of 15</td>
+                <td class="hw-cost">$8</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.homedepot.com/p/Everbilt-M4-0-7-x-25-mm-Zinc-Pan-Head-Phillips-Drive-Machine-Screw-4-Pieces-836401/321071601" target="_blank" rel="noopener">M4-0.7 x 25 mm pan head machine screws</a></td>
+                <td>1 pack</td>
+                <td>Home Depot. Holds the mounting arm. Pack of 4</td>
+                <td class="hw-cost">$2</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.homedepot.com/p/Everbilt-M4-0-7-Stainless-Steel-Lock-Nut-4-Pieces-837171/321071795" target="_blank" rel="noopener">M4-0.7 nylon lock nuts</a></td>
+                <td>1 pack</td>
+                <td>Home Depot. Pack of 4</td>
+                <td class="hw-cost">$2</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.printables.com/model/1214804-parametric-harbor-breeze-meshtastic-mounting-arm" target="_blank" rel="noopener">Antenna mounting arm</a></td>
+                <td>1</td>
+                <td>3D-printed. Sized for a 22.5 mm antenna, but it's parametric (Fusion 360), so you can resize it for yours</td>
+                <td class="hw-cost">Filament only</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.printables.com/model/886187-harbor-breeze-meshtastic-mount/files#preview.file.Oz9Sa" target="_blank" rel="noopener">Dovetail mount</a></td>
+                <td>1</td>
+                <td>3D-printed. Dovetails for mounting the build to a wall, fascia or post</td>
+                <td class="hw-cost">Filament only</td>
+              </tr>
+              <tr>
+                <td>Silicone sealant or caulk</td>
+                <td>A little</td>
+                <td>Seals the antenna cable hole. Hot glue or superglue also work</td>
+                <td class="hw-cost">Varies</td>
               </tr>
               <tr class="fw-bold">
                 <td colspan="3">Total</td>
-                <td class="hw-cost">~$0</td>
+                <td class="hw-cost">~$97</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="small text-secondary">Prices last checked November 2026.</p>
+        <div class="alert alert-warning hw-callout" role="note">
+          <b>Print the mounts in ABS or ASA.</b> They live outside in direct sun. PLA softens in summer heat and breaks
+          down in sunlight, while ABS and ASA handle both. ASA is the most UV-resistant.
+        </div>
 
-        <h3 class="h5 fw-bold mt-4">Assembly notes</h3>
-        <ol>
-          <li>Step one.</li>
-          <li>Step two.</li>
-          <li>Step three.</li>
+        <h3 class="h5 fw-bold mt-5">Step by step</h3>
+        <ol class="hw-steps list-unstyled">
+          <li class="hw-step" id="step-1">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/1_light_full-web.jpg" alt="The solar spotlight before any changes" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 1</span> The solar light</h4>
+                <p>
+                  Get your spotlight and prepare your workspace.
+                </p>
+                <div class="alert alert-info hw-callout mb-0" role="note">
+                  <b>Flash the board first.</b> Follow the <a href="#setup">Setup</a> steps below before you install the board, so you don't have to reopen the enclosure later.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-2">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/2_panel_back-web.jpg" alt="The back of the light's solar panel housing" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 2</span> Separating the panel</h4>
+                <p>
+                  Unscrew the joint between the panel and the light all the way. Keep the screw for now.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-3">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/3_panel_removed-web.jpg" alt="The solar panel cover removed" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 3</span> Removing the back screws</h4>
+                <p>
+                  Separate the light and the panel as far as the cable will allow. Remove the four screws on the back corners of the panel.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-4">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/4_panel_open-web.jpg" alt="The panel housing opened, showing the stock battery and circuit board" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 4</span> Opening the panel</h4>
+                <p>
+                  Open the solar panel to expose the internals.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-5">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/5_battery_removed-web.jpg" alt="The housing with the stock battery removed" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 5</span> Removing the stock battery</h4>
+                <p>
+                  Remove the battery and set it aside.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-6">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/6_switch_removed-web.jpg" alt="The housing with the power switch removed" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 6</span> Removing the switch</h4>
+                <p>
+                  Unscrew the switch panel, then cut the wires that lead to it as close to the board as possible to give you more room to work. You can throw this board away, but keep the screws. You'll use them to mount the RAK board in step 13.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-7">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/7_battery_solder-web.jpg" alt="Battery leads soldered for the new board" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 7</span> Soldering the battery leads</h4>
+                <p>
+                  Strip the red and black battery leads and solder them to your JST connectors or pigtails.
+                </p>
+                <div class="alert alert-warning hw-callout mb-0" role="note">
+                  <b>Check the polarity.</b> Many JST pigtails come wired backwards, so don't go by the wire colors alone. Look at the RAK board and make sure the battery's red lead goes to the pin marked <b>+</b>. Getting this wrong will damage the board.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-8">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/8_solar_solder-web.jpg" alt="Solar panel leads soldered for the new board" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 8</span> Soldering the solar leads</h4>
+                <p>
+                  Strip the black and white solar leads and solder them to your JST connectors or pigtails:
+                  black to black, and white to red.
+                </p>
+                <div class="alert alert-warning hw-callout mb-0" role="note">
+                  <b>Check the polarity.</b> The panel's white lead is positive. Make sure it goes to the pin marked <b>+</b> on the RAK board's solar connector. Getting this wrong will damage the board.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-9">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/9_antenna-route_external-web.jpg" alt="The antenna cable route on the outside of the housing" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 9</span> Routing the antenna: outside</h4>
+                <p>
+                  Identify the hole underneath the mounting area for your antenna to run.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-10">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/10_antenna-route_internal-web.jpg" alt="The antenna cable route on the inside of the housing" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 10</span> Routing the antenna: inside</h4>
+                <p>
+                  Identify the hole in the top of the panel enclosure for your antenna to run.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-11">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/11_antenna-run_external-web.jpg" alt="The antenna cable run on the outside of the light" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 11</span> Running the antenna cable: outside</h4>
+                <p>
+                  Run the antenna cable through the hole in the mounting area.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-12">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/12_antenna-run_internal-web.jpg" alt="The antenna cable run inside the housing" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 12</span> Running the antenna cable: inside</h4>
+                <p>
+                  Run the antenna cable through the hole in the top of the panel enclosure.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-13">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/13_rak_mount-web.jpg" alt="The RAK board mounted in the panel housing" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 13</span> Mounting the RAK board</h4>
+                <p>
+                  Using the screws that held the switch board in place, attach the RAK board to the inside of the enclosure.
+                </p>
+                <div class="alert alert-info hw-callout mb-0" role="note">
+                  <b>Recommended (not pictured).</b> Glue the silicone switch cover back into place to seal the hole
+                  and keep the weather out. We used superglue.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-14">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/14_hardware-web.jpg" alt="M4 machine screws and nylock nuts in their store packaging" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 14</span> Mounting hardware</h4>
+                <p>
+                  To attach the 3D-printed mounting arm to the shell, we recommend an M4 machine screw and an M4 nylock nut.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-15">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/15_antenna-mounted_external-web.jpg" alt="The 3D-printed antenna mounting arm bolted to the outside of the light" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 15</span> Mounting the antenna arm</h4>
+                <p>
+                  Attach the 3D-printed mounting arm to the enclosure using the M4 machine screw and nylock nut from the previous step.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-16">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/16_cable-connected-web.jpg" alt="The antenna cable connected to the RAK board inside the enclosure" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 16</span> Connecting the antenna cable</h4>
+                <p>
+                  Attach the antenna cable (routed through the mounting eye) to the board. Press firmly and make sure it doesn't pop back out when you let go.
+                </p>
+                <div class="alert alert-warning hw-callout mb-0" role="note">
+                  <b>Seal the cable hole.</b> Now is the time to seal the hole the antenna cable runs through. We recommend silicone sealant or caulk, but hot glue or superglue will also work.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-17">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/17_antenna-attached-web.jpg" alt="The antenna attached to the light" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 17</span> Attaching the antenna</h4>
+                <p>
+                  Attach the antenna to the connector on the back of the board.
+                </p>
+                <div class="alert alert-danger hw-callout mb-0" role="note">
+                  <b>Antenna first.</b> Attach the antenna before you connect the battery or the solar panel. Powering the board without an antenna can permanently damage it.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-18">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/18_battery-attached-web.jpg" alt="The battery connected inside the enclosure" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 18</span> Connecting the battery</h4>
+                <p>
+                  Insert the battery into the holder, then plug the JST connector into the battery side of the board.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-19">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/19_panel-attached-web.jpg" alt="The solar panel connected to the RAK board" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 19</span> Connecting the solar panel</h4>
+                <p>
+                  Plug the JST connector from the solar panel into the solar side of the board.
+                </p>
+                <div class="alert alert-info hw-callout mb-0" role="note">
+                  <b>Not flashed yet?</b> If the board isn't flashed and configured yet, do it now (see <a href="#setup">Setup</a>), before you close the enclosure.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-20">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/20_screwed-together-web.jpg" alt="The panel enclosure screwed back together" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 20</span> Closing the enclosure</h4>
+                <p>
+                  Fit the solar panel back onto the top of the enclosure with the original screws. Turn them slowly, as they can strip if you go too fast.
+                </p>
+                <div class="alert alert-warning hw-callout mb-0" role="note">
+                  <b>Don't pinch any wires.</b> A pinched wire can damage the board or the battery.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hw-step" id="step-21">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-5">
+                <figure class="hw-photo">
+                  <img src="../img/hardware/repeater/21_finished-web.jpg" alt="The finished repeater on the workbench" loading="lazy">
+                </figure>
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="h5 fw-bold"><span class="hw-step-num">Step 21</span> Finished</h4>
+                <p>
+                  Done! Enjoy your new mesh repeater.
+                </p>
+              </div>
+            </div>
+          </li>
         </ol>
 
-        <h3 class="h5 fw-bold mt-4">Photos</h3>
+        <h3 class="h5 fw-bold mt-5">The finished repeater</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <figure class="hw-photo">
-              <div class="hw-photo-empty">Photo coming soon</div>
-              <figcaption>Caption</figcaption>
+              <img src="../img/hardware/repeater/finished_front-web.jpg" style="aspect-ratio: 3 / 4" alt="The finished Basic Repeater from the front" loading="lazy">
+              <figcaption>Front</figcaption>
             </figure>
           </div>
           <div class="col">
             <figure class="hw-photo">
-              <div class="hw-photo-empty">Photo coming soon</div>
-              <figcaption>Caption</figcaption>
+              <img src="../img/hardware/repeater/finished_side-web.jpg" style="aspect-ratio: 3 / 4" alt="The finished Basic Repeater from the side" loading="lazy">
+              <figcaption>Side</figcaption>
             </figure>
           </div>
           <div class="col">
             <figure class="hw-photo">
-              <div class="hw-photo-empty">Photo coming soon</div>
-              <figcaption>Caption</figcaption>
+              <img src="../img/hardware/repeater/finished_top-web.jpg" style="aspect-ratio: 3 / 4" alt="The finished Basic Repeater from above" loading="lazy">
+              <figcaption>Top</figcaption>
             </figure>
           </div>
         </div>
@@ -186,14 +578,20 @@
 
       <section id="setup">
         <h2>Setup</h2>
+        <div class="alert alert-danger hw-callout hw-antenna-warning" role="alert">
+          <b>Connect the antenna before you power it on.</b> Powering a LoRa radio without an antenna attached,
+          even just over USB to flash it, can permanently damage it.
+        </div>
         <p>
-          How to flash the firmware and get the device running.
+          Flash the RAK board before you install it (see <a href="#step-1">step 1</a>). Plug it in over USB-C and use a web
+          flasher (Chrome or Edge), choosing the <b>RAK4631</b> firmware. If the flasher can't find it, double-press the
+          reset button to put it in bootloader mode and try again. Then follow our recommended repeater settings.
         </p>
         <ul>
           <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
-            then see <a href="../meshcore/companion-settings.html">MeshCore companion settings</a>.</li>
+            then see <a href="../meshcore/repeater-settings.html">MeshCore repeater settings</a>.</li>
           <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
-            then see <a href="../meshtastic/companion-settings.html">Meshtastic companion settings</a>.</li>
+            then see <a href="../meshtastic/infrastructure-settings.html">Meshtastic infrastructure settings</a>.</li>
         </ul>
       </section>
 
@@ -236,7 +634,7 @@
     </div>
 
     <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
-        target="_blank">templatedeck.com</a>
+        target="_blank" rel="noopener">templatedeck.com</a>
     </div>
   </footer>
 

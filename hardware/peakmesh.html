@@ -146,8 +146,12 @@
 
       <section id="setup">
         <h2>Setup</h2>
+        <div class="alert alert-danger hw-callout hw-antenna-warning" role="alert">
+          <b>Connect the antenna before you power it on.</b> Powering a LoRa radio without an antenna attached,
+          even just over USB to flash it, can permanently damage it.
+        </div>
         <ol>
-          <li><b>Attach the antenna before you switch it on.</b> Running the radio without an antenna can damage it.</li>
+          <li>Attach the antenna.</li>
           <li>Press the power switch. It glows faint blue while the radio is on.</li>
           <li>After about 20 seconds, connect from the Meshtastic app over Bluetooth. The default PIN is <b>123456</b>.
             Change it once you're connected.</li>
@@ -206,7 +210,7 @@
     </div>
 
     <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
-        target="_blank">templatedeck.com</a>
+        target="_blank" rel="noopener">templatedeck.com</a>
     </div>
   </footer>
 
@@ -215,3 +219,4 @@
 
 </body>
 
+</html>

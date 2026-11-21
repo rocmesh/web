@@ -60,6 +60,7 @@
               <li><a class="dropdown-item" href="${root}hardware/esp32v3solar.html">Heltec V3 Solar Repeater</a></li>
               <li><a class="dropdown-item" href="${root}hardware/polepeater.html">Seeed XIAO Polepeater Build</a></li>
               <li><a class="dropdown-item" href="${root}hardware/icepeter.html">Icepeter</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/pillpeater.html">Pillpeater</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><h6 class="dropdown-header">Ready-made handhelds</h6></li>
               <li><a class="dropdown-item" href="${root}hardware/wismeshpocket.html">RAK WisMesh Pocket V2</a></li>
