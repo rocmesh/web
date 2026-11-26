@@ -1,0 +1,209 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Seeed SenseCAP Solar Node P1-Pro: a ready-made solar repeater with GPS and batteries included. What it is, its role in the mesh and where to buy it.">
+  <title>ROCMesh - Seeed SenseCAP Solar Node P1-Pro</title>
+  <link rel="stylesheet" href="../css/theme.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/hardware.css">
+
+</head>
+
+<body>
+
+  <script src="../js/nav.js"></script>
+
+  <main class="hw-page">
+    <div class="container py-vh-4">
+
+      <a href="index.html" class="link-secondary text-decoration-none small d-inline-block mt-5">&larr; All hardware</a>
+
+      <div class="row align-items-center g-5 mt-0">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-4 fw-bold">Seeed SenseCAP Solar Node P1-Pro</h1>
+          <p class="lead">
+            A ready-made solar repeater with GPS and four 18650 batteries included. Clamp it to a pole, attach the antenna
+            and it's on the mesh. No soldering needed.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill hw-tag hw-tag-meshcore">MeshCore</span>
+            <span class="badge rounded-pill hw-tag hw-tag-meshtastic">Meshtastic</span>
+            <span class="badge rounded-pill hw-tag hw-tag-role">Repeater</span>
+            <span class="badge rounded-pill hw-tag hw-tag-low-power">Low power</span>
+            <span class="badge rounded-pill hw-tag hw-tag-feature">Solar</span>
+            <span class="badge rounded-pill hw-tag hw-tag-feature">GPS</span>
+            <span class="badge rounded-pill hw-tag hw-tag-price">~$97</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <img class="hw-hero-img" src="../img/hardware/p1pro_roof-web.jpg"
+            alt="Two SenseCAP Solar Node P1-Pros clamped to a vent pipe on a shingled roof, facing opposite directions with their antennas pointing up">
+        </div>
+      </div>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          The SenseCAP Solar Node P1-Pro is Seeed's all-in-one outdoor node. Inside a weather-resistant case are a XIAO nRF52840
+          Plus, a Wio-SX1262 LoRa radio, an L76K GPS module and four 18650 batteries, all charged by a 5 W solar panel on the front.
+          It's the same low-power nRF52840 chip as our <a href="polepeater.html">Polepeater</a>, so the panel easily keeps up.
+        </p>
+        <p>
+          It arrives assembled, with the batteries installed and Meshtastic already flashed. In the box are a 2 dBi antenna on a
+          30 cm cable, an adjustable bracket and a clamp for poles 70-100 mm across. Seeed also sells the plain
+          <a href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html" target="_blank" rel="noopener">P1</a>,
+          which has no GPS and no batteries, if you'd rather supply your own cells.
+        </p>
+
+        <table class="table hw-facts border mt-4 mb-0">
+          <tbody>
+            <tr><th scope="row">Processor</th><td>Nordic nRF52840 on a Seeed XIAO nRF52840 Plus (Bluetooth LE 5.0)</td></tr>
+            <tr><th scope="row">Radio</th><td>Semtech SX1262 on a Wio-SX1262 module, up to 22 dBm, covers 902-928 MHz (US)</td></tr>
+            <tr><th scope="row">GPS</th><td>L76K (GPS, GLONASS, Galileo, BeiDou)</td></tr>
+            <tr><th scope="row">Antenna</th><td>2 dBi rubber antenna on a 30 cm RP-SMA cable. Higher-gain antennas are sold separately</td></tr>
+            <tr><th scope="row">Power</th><td>5 W solar panel and four 18650 cells (3350 mAh each, included). USB-C for charging and setup</td></tr>
+            <tr><th scope="row">Mounting</th><td>Adjustable bracket and a clamp for 70-100 mm poles, included</td></tr>
+            <tr><th scope="row">Size</th><td>191 x 201 x 42 mm</td></tr>
+            <tr><th scope="row">Documentation</th><td><a href="https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/" target="_blank" rel="noopener">Seeed wiki (Meshtastic)</a>, <a href="https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/" target="_blank" rel="noopener">Seeed wiki (MeshCore)</a></td></tr>
+            <tr><th scope="row">Firmware</th><td>MeshCore, Meshtastic (ships with Meshtastic)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Role in the mesh</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge text-bg-success mb-2">Recommended</span>
+              <h3>Solar repeater</h3>
+              <p class="mb-0">
+                What it's built for. Clamp it high on a pole or mast facing south, and the panel and four batteries keep it
+                running through cloudy stretches.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-works mb-2">Works</span>
+              <h3>Temporary repeater</h3>
+              <p class="mb-0">
+                It's self-contained, so you can take it to an event and strap it to a post. It's bulky to carry, though,
+                compared with the <a href="pillpeater.html">Pillpeater</a> or <a href="icepeter.html">Icepeter</a>.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="hw-role">
+              <span class="badge hw-rating-not-recommended mb-2">Not recommended</span>
+              <h3>Companion</h3>
+              <p class="mb-0">
+                It will pair with a phone, but it's made to live on a pole. For a ready-made companion, see the
+                <a href="x1.html">Seeed SenseCAP MeshTracker X1</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Where to buy and what it costs</h2>
+        <p>
+          One version covers both the EU and US bands, so there's no frequency to choose when ordering. Set the region to
+          <b>US</b> during setup.
+        </p>
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr><th>Seller</th><th>Notes</th><th class="text-end">Approx. price</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank" rel="noopener">Seeed Studio (official)</a></td>
+                <td>Includes GPS, batteries, antenna and mounting hardware</td>
+                <td class="text-end text-nowrap">$97</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small text-secondary">Prices last checked November 2026.</p>
+      </section>
+
+      <section id="setup">
+        <h2>Setup</h2>
+        <div class="alert alert-danger hw-callout hw-antenna-warning" role="alert">
+          <b>Connect the antenna before you power it on.</b> Powering a LoRa radio without an antenna attached,
+          even just over USB to flash it, can permanently damage it.
+        </div>
+        <ol>
+          <li>Screw on the antenna cable and antenna.</li>
+          <li>Turn it on with the power button, then connect from the Meshtastic app over Bluetooth.</li>
+          <li>Set the region to <b>US</b> and follow our recommended repeater settings.</li>
+          <li>Mount it outside, as high as you can, with the panel facing south.</li>
+        </ol>
+        <p>
+          It ships with Meshtastic. To switch to MeshCore, plug it in over USB-C and use the MeshCore web flasher (Chrome or Edge),
+          then follow Seeed's <a href="https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/" target="_blank" rel="noopener">MeshCore guide</a>
+          for the exact steps.
+        </p>
+        <ul>
+          <li><b>MeshCore:</b> <a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">MeshCore web flasher</a>,
+            then see <a href="../meshcore/repeater-settings.html">MeshCore repeater settings</a>.</li>
+          <li><b>Meshtastic:</b> <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener">Meshtastic web flasher</a>,
+            then see <a href="../meshtastic/infrastructure-settings.html">Meshtastic infrastructure settings</a>.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small border-top">
+      <div class="row py-5 d-flex justify-content-between">
+
+        <div class="col-12 col-lg-6 col-xl-3 border-end p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
+          </svg>
+          <address class="text-secondary mt-3">
+            <strong>RocMesh</strong><br>
+            Rochester, New York<br>
+            <abbr title="Email">E:</abbr>
+            admin@rocmesh.com
+          </address>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-3 p-5">
+          <h3 class="h6 mb-3">Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://discord.gg/aBsNaKy2u5">Join Our
+                Discord!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshtastic.org/">Check out
+                Meshtastic!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="https://meshcore.io/">Check out
+                Meshcore!</a>
+              <a class="nav-link link-secondary ps-0" aria-current="page" href="mailto:admin@rocmesh.com">Email Us!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy"
+        target="_blank" rel="noopener">templatedeck.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/hardware.js"></script>
+
+</body>
+
+</html>

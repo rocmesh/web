@@ -57,6 +57,7 @@
               <li><a class="dropdown-item" href="${root}hardware/repeater.html">Basic Repeater</a></li>
               <li><a class="dropdown-item" href="${root}hardware/rak1w.html">RAK3401 & RAK13302 1W Repeater</a></li>
               <li><a class="dropdown-item" href="${root}hardware/peakmesh.html">PeakMesh Magnet Mover</a></li>
+              <li><a class="dropdown-item" href="${root}hardware/p1pro.html">Seeed SenseCAP Solar Node P1-Pro</a></li>
               <li><a class="dropdown-item" href="${root}hardware/esp32v3solar.html">Heltec V3 Solar Repeater</a></li>
               <li><a class="dropdown-item" href="${root}hardware/polepeater.html">Seeed XIAO Polepeater Build</a></li>
               <li><a class="dropdown-item" href="${root}hardware/icepeter.html">Icepeter</a></li>
